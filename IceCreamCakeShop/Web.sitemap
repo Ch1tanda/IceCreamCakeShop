@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
 	<siteMapNode url="index.aspx" title="冰菓蛋糕店">
-        <siteMapNode url="InfoManagement.aspx" title="信息管理系统"  description="">
-            <siteMapNode url="UserInfoManagement.aspx" title="用户信息管理"  description="" />
-            <siteMapNode url="StaffInfoManagement.aspx" title="员工信息管理"  description="" />
-            <siteMapNode url="SupplierInfoManagement.aspx" title="供应商信息管理"  description="" />
+        <siteMapNode url="Main/3.1.1 InfoManagement/InfoManagement.aspx" title="信息管理系统"  description="">
+            <siteMapNode url="Main/3.1.1 InfoManagement/UserInfoManagement.aspx" title="用户信息管理"  description="" />
+            <siteMapNode url="Main/3.1.1 InfoManagement/StaffInfoManagement.aspx" title="员工信息管理"  description="" />
+            <siteMapNode url="Main/3.1.1 InfoManagement/SupplierInfoManagement.aspx" title="供应商信息管理"  description="" />
         </siteMapNode>
-		<siteMapNode url="VipManagement.aspx" title="会员信息管理"  description="">
+		<siteMapNode url="Main/3.1.2 VipManagement/VipManagement.aspx" title="会员信息管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>
-		<siteMapNode url="StockManagement.aspx" title="原料点心进退货管理"  description="">
+		<siteMapNode url="Main/3.1.3 StockManagement/StockManagement.aspx" title="原料点心进退货管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>
-		<siteMapNode url="CakeMakeManagement.aspx" title="蛋糕制作取材管理"  description="">
+		<siteMapNode url="Main/3.1.4 CakeMakeManagement/CakeMakeManagement.aspx" title="蛋糕制作取材管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>
-		<siteMapNode url="DessertManagement.aspx" title="点心出入库管理"  description="">
+		<siteMapNode url="Main/3.1.6 DessertManagement/DessertManagement.aspx" title="点心出入库管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>
-		<siteMapNode url="RoutineManagement.aspx" title="事务提醒管理"  description="">
+		<siteMapNode url="Main/3.1.7 RoutineManagement/RoutineManagement.aspx" title="事务提醒管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>

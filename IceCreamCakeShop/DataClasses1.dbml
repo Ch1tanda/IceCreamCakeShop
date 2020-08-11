@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="IceCream Cake Shop" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=47.92.72.190;Initial Catalog=&quot;IceCream Cake Shop&quot;;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="IceCream_Cake_ShopConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Cakeinfo" Member="Cakeinfo">
+    <Type Name="Cakeinfo">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Cakeinfo_Cakerecipe" Member="Cakerecipe" ThisKey="id" OtherKey="id" Type="Cakerecipe" Cardinality="One" />
+      <Association Name="Cakeinfo_Userorder" Member="Userorder" ThisKey="id" OtherKey="cdid" Type="Userorder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cakerecipe" Member="Cakerecipe">
+    <Type Name="Cakerecipe">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="recipe" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Cakeinfo_Cakerecipe" Member="Cakeinfo" ThisKey="id" OtherKey="id" Type="Cakeinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Goods" Member="Goods">
+    <Type Name="Goods">
+      <Column Name="sid" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mid" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Supplierinfo_Goods" Member="Supplierinfo" ThisKey="sid" OtherKey="id" Type="Supplierinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Staffinfo" Member="Staffinfo">
+    <Type Name="Staffinfo">
+      <Column Name="id" Type="System.String" DbType="VarChar(4) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="sex" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="age" Type="System.String" DbType="VarChar(3) NOT NULL" CanBeNull="false" />
+      <Column Name="phonenumber" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="position" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Association Name="Staffinfo_Supplierorder" Member="Supplierorder" ThisKey="id" OtherKey="staffid" Type="Supplierorder" />
+      <Association Name="Staffinfo_Userorder" Member="Userorder" ThisKey="id" OtherKey="staffid" Type="Userorder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stock">
+    <Type Name="Stock">
+      <Column Name="mid" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="stock" Member="stock1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplierinfo" Member="Supplierinfo">
+    <Type Name="Supplierinfo">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="tel" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Association Name="Supplierinfo_Goods" Member="Goods" ThisKey="id" OtherKey="sid" Type="Goods" Cardinality="One" />
+      <Association Name="Supplierinfo_Supplierorder" Member="Supplierorder" ThisKey="id" OtherKey="supplierid" Type="Supplierorder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Supplierorder" Member="Supplierorder">
+    <Type Name="Supplierorder">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="supplierid" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="materialid" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="staffid" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Staffinfo_Supplierorder" Member="Staffinfo" ThisKey="staffid" OtherKey="id" Type="Staffinfo" IsForeignKey="true" />
+      <Association Name="Supplierinfo_Supplierorder" Member="Supplierinfo" ThisKey="supplierid" OtherKey="id" Type="Supplierinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Userinfo" Member="Userinfo">
+    <Type Name="Userinfo">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(24) NOT NULL" CanBeNull="false" />
+      <Column Name="phonenumber" Type="System.String" DbType="VarChar(32) NOT NULL" CanBeNull="false" />
+      <Column Name="address" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="birthday" Type="System.String" DbType="VarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="viptype" Type="System.String" DbType="VarChar(16) NOT NULL" CanBeNull="false" />
+      <Column Name="gmv" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Association Name="Userinfo_Userorder" Member="Userorder" ThisKey="id" OtherKey="userid" Type="Userorder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Userorder" Member="Userorder">
+    <Type Name="Userorder">
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="userid" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="staffid" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="cdid" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="number" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
+      <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="Cakeinfo_Userorder" Member="Cakeinfo" ThisKey="cdid" OtherKey="id" Type="Cakeinfo" IsForeignKey="true" />
+      <Association Name="Staffinfo_Userorder" Member="Staffinfo" ThisKey="staffid" OtherKey="id" Type="Staffinfo" IsForeignKey="true" />
+      <Association Name="Userinfo_Userorder" Member="Userinfo" ThisKey="userid" OtherKey="id" Type="Userinfo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
