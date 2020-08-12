@@ -15,15 +15,6 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
     {
 
         /// <summary>
-        /// SiteMapDataSource1 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteMapDataSource1;
-
-        /// <summary>
         /// ContentPlaceHolder1 控件。
         /// </summary>
         /// <remarks>

@@ -135,7 +135,6 @@
     </None>
     <Content Include="Main\3.1.0 Login\Login.aspx" />
     <Content Include="Main\3.1.0 Login\Register.aspx" />
-    <Content Include="Main\3.1.0 Login\Site1.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Index.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\InfoManagement.aspx" />
@@ -183,6 +182,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="Web.sitemap" />
     <Content Include="web.config" />
+    <Content Include="Site1.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -242,12 +242,6 @@
     </Compile>
     <Compile Include="Main\3.1.0 Login\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Main\3.1.0 Login\Site1.Master.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
-    </Compile>
-    <Compile Include="Main\3.1.0 Login\Site1.Master.designer.cs">
-      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\InfoManagement.aspx.cs">
       <DependentUpon>InfoManagement.aspx</DependentUpon>
@@ -333,6 +327,12 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

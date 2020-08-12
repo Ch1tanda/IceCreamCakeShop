@@ -225,4 +225,3 @@ D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CoreCompileInputs.ca
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CopyComplete
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.dll
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.pdb
-D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csprojAssemblyReference.cache

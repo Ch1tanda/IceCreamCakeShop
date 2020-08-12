@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Main/3.1.0 Login/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._0_Login.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._0_Login.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -59,7 +59,7 @@
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;&nbsp;
-                    <asp:Button ID="Button1" runat="server" Text="登录" Width="73px" />
+                    <asp:Button ID="Button1" runat="server" Text="登录" Width="73px" OnClick="Button1_Click" />
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
@@ -67,7 +67,7 @@
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td><a href="#">没有账号？立即注册！</a></td>
+                <td><a href="Register.aspx">没有账号？立即注册！</a></td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>

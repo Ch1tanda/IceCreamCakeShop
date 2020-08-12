@@ -62,8 +62,6 @@
             <div id="LeftTreeView" class="LeftTreeView">
                 <div id="TreeView" class="TreeView">
 
-                    <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
-
                 </div>
             </div>
             <div id="PlaceHolder" class="PlaceHolder">
