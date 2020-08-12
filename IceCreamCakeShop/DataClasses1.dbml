@@ -5,15 +5,8 @@
       <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
       <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
-      <Association Name="Cakeinfo_Cakerecipe" Member="Cakerecipe" ThisKey="id" OtherKey="id" Type="Cakerecipe" Cardinality="One" />
+      <Column Name="recipe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Cakeinfo_Userorder" Member="Userorder" ThisKey="id" OtherKey="cdid" Type="Userorder" />
-    </Type>
-  </Table>
-  <Table Name="dbo.Cakerecipe" Member="Cakerecipe">
-    <Type Name="Cakerecipe">
-      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="recipe" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
-      <Association Name="Cakeinfo_Cakerecipe" Member="Cakeinfo" ThisKey="id" OtherKey="id" Type="Cakeinfo" IsForeignKey="true" />
     </Type>
   </Table>
   <Table Name="dbo.Goods" Member="Goods">

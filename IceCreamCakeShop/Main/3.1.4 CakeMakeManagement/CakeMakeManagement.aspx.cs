@@ -13,5 +13,11 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
         {
 
         }
+
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("addCake.aspx");
+        }
     }
 }

@@ -33,9 +33,6 @@ namespace IceCreamCakeShop
     partial void InsertCakeinfo(Cakeinfo instance);
     partial void UpdateCakeinfo(Cakeinfo instance);
     partial void DeleteCakeinfo(Cakeinfo instance);
-    partial void InsertCakerecipe(Cakerecipe instance);
-    partial void UpdateCakerecipe(Cakerecipe instance);
-    partial void DeleteCakerecipe(Cakerecipe instance);
     partial void InsertGoods(Goods instance);
     partial void UpdateGoods(Goods instance);
     partial void DeleteGoods(Goods instance);
@@ -91,14 +88,6 @@ namespace IceCreamCakeShop
 			get
 			{
 				return this.GetTable<Cakeinfo>();
-			}
-		}
-		
-		public System.Data.Linq.Table<Cakerecipe> Cakerecipe
-		{
-			get
-			{
-				return this.GetTable<Cakerecipe>();
 			}
 		}
 		
@@ -171,7 +160,7 @@ namespace IceCreamCakeShop
 		
 		private decimal _price;
 		
-		private EntityRef<Cakerecipe> _Cakerecipe;
+		private string _recipe;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -183,11 +172,12 @@ namespace IceCreamCakeShop
     partial void OnnameChanged();
     partial void OnpriceChanging(decimal value);
     partial void OnpriceChanged();
+    partial void OnrecipeChanging(string value);
+    partial void OnrecipeChanged();
     #endregion
 		
 		public Cakeinfo()
 		{
-			this._Cakerecipe = default(EntityRef<Cakerecipe>);
 			OnCreated();
 		}
 		
@@ -251,109 +241,7 @@ namespace IceCreamCakeShop
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Cakerecipe", Storage="_Cakerecipe", ThisKey="id", OtherKey="id", IsUnique=true, IsForeignKey=false)]
-		public Cakerecipe Cakerecipe
-		{
-			get
-			{
-				return this._Cakerecipe.Entity;
-			}
-			set
-			{
-				Cakerecipe previousValue = this._Cakerecipe.Entity;
-				if (((previousValue != value) 
-							|| (this._Cakerecipe.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cakerecipe.Entity = null;
-						previousValue.Cakeinfo = null;
-					}
-					this._Cakerecipe.Entity = value;
-					if ((value != null))
-					{
-						value.Cakeinfo = this;
-					}
-					this.SendPropertyChanged("Cakerecipe");
-				}
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Cakerecipe")]
-	public partial class Cakerecipe : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _id;
-		
-		private string _recipe;
-		
-		private EntityRef<Cakeinfo> _Cakeinfo;
-		
-    #region 可扩展性方法定义
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnidChanging(string value);
-    partial void OnidChanged();
-    partial void OnrecipeChanging(string value);
-    partial void OnrecipeChanged();
-    #endregion
-		
-		public Cakerecipe()
-		{
-			this._Cakeinfo = default(EntityRef<Cakeinfo>);
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string id
-		{
-			get
-			{
-				return this._id;
-			}
-			set
-			{
-				if ((this._id != value))
-				{
-					if (this._Cakeinfo.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
-					this.OnidChanging(value);
-					this.SendPropertyChanging();
-					this._id = value;
-					this.SendPropertyChanged("id");
-					this.OnidChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_recipe", DbType="VarChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_recipe", DbType="VarChar(50)")]
 		public string recipe
 		{
 			get
@@ -369,40 +257,6 @@ namespace IceCreamCakeShop
 					this._recipe = value;
 					this.SendPropertyChanged("recipe");
 					this.OnrecipeChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Cakerecipe", Storage="_Cakeinfo", ThisKey="id", OtherKey="id", IsForeignKey=true)]
-		public Cakeinfo Cakeinfo
-		{
-			get
-			{
-				return this._Cakeinfo.Entity;
-			}
-			set
-			{
-				Cakeinfo previousValue = this._Cakeinfo.Entity;
-				if (((previousValue != value) 
-							|| (this._Cakeinfo.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._Cakeinfo.Entity = null;
-						previousValue.Cakerecipe = null;
-					}
-					this._Cakeinfo.Entity = value;
-					if ((value != null))
-					{
-						value.Cakerecipe = this;
-						this._id = value.id;
-					}
-					else
-					{
-						this._id = default(string);
-					}
-					this.SendPropertyChanged("Cakeinfo");
 				}
 			}
 		}

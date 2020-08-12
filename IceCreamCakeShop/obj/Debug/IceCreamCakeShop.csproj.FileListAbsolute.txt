@@ -221,8 +221,8 @@ D:\shixi\IceCreamCakeShop\bin\Microsoft.AspNet.FriendlyUrls.xml
 D:\shixi\IceCreamCakeShop\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 D:\shixi\IceCreamCakeShop\bin\zh-Hans\System.Web.Optimization.resources.dll
 D:\shixi\IceCreamCakeShop\bin\zh-Hans\Microsoft.AspNet.FriendlyUrls.resources.dll
-D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csprojAssemblyReference.cache
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CoreCompileInputs.cache
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CopyComplete
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.dll
 D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.pdb
+D:\shixi\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csprojAssemblyReference.cache
