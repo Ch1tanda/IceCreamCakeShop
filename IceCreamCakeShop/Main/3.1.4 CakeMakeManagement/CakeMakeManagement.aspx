@@ -1,5 +1,13 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CakeMakeManagement.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._4_CakeMakeManagement.CakeMakeManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <asp:Label ID="Label1" runat="server" Text="按名称搜索："></asp:Label>
+    <asp:TextBox ID="TextBox1" runat="server" AutoPostBack="True" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+    <br />
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged" RepeatDirection="Horizontal" RepeatLayout="Flow">
+        <asp:ListItem Selected="True" Value="0">全选</asp:ListItem>
+        <asp:ListItem Value="C">蛋糕</asp:ListItem>
+        <asp:ListItem Value="D">点心</asp:ListItem>
+    </asp:RadioButtonList>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div runat="server">
@@ -7,11 +15,11 @@
         <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="LinqDataSource1" ForeColor="#333333" GridLines="None" Width="816px">
             <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
             <Columns>
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                 <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
-                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
-                <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-                <asp:BoundField DataField="recipe" HeaderText="recipe" SortExpression="recipe" />
+                <asp:BoundField DataField="name" HeaderText="名称" SortExpression="name" />
+                <asp:BoundField DataField="price" HeaderText="单价" SortExpression="price" />
+                <asp:BoundField DataField="recipe" HeaderText="配方" SortExpression="recipe" />
+                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
             </Columns>
             <EditRowStyle BackColor="#999999" />
             <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />

@@ -19,5 +19,32 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
         {
             Response.Redirect("addCake.aspx");
         }
+
+        protected void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+
+        /// <summary>
+        /// 用于检索蛋糕信息
+        /// </summary>
+        protected void Search()
+        {
+            var cakeName = TextBox1.Text;
+            var cate = RadioButtonList1.SelectedValue;
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            List<Cakeinfo> cakeinfos = dc.Cakeinfo.Where(p => p.name.Contains(cakeName)).ToList();
+            if (!cate.Equals("0"))
+                cakeinfos = cakeinfos.Where(p => p.id.Contains(cate)).ToList();
+            GridView1.DataSourceID = null;
+            GridView1.DataSource = cakeinfos;
+            GridView1.DataBind();
+        }
+
+
     }
 }
