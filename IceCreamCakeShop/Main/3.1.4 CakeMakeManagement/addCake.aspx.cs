@@ -26,6 +26,7 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+
             var id = Label5.Text;
             DataClasses1DataContext dc = new DataClasses1DataContext();
             Cakeinfo newCake = new Cakeinfo();
@@ -36,6 +37,11 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
             dc.Cakeinfo.InsertOnSubmit(newCake);
             dc.SubmitChanges();
             Response.Redirect("CakeMakeManagement.aspx");
+        }
+
+        protected void TextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
