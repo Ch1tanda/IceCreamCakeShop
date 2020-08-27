@@ -41,7 +41,7 @@
                     <asp:Label ID="Label3" runat="server" Text="密码："></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" type="password"></asp:TextBox>
                 </td>
                 <td>&nbsp;</td>
                 <td>&nbsp;</td>
