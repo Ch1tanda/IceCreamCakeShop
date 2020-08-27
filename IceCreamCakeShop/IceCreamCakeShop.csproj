@@ -137,8 +137,6 @@
     <Content Include="Main\3.1.0 Login\Register.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Index.aspx" />
-    <Content Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx" />
-    <Content Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\InfoManagement.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\StaffInfoManagement.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\SupplierInfoManagement.aspx" />
@@ -245,20 +243,6 @@
     </Compile>
     <Compile Include="Main\3.1.0 Login\Register.aspx.designer.cs">
       <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx.cs">
-      <DependentUpon>AddStaffInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx.designer.cs">
-      <DependentUpon>AddStaffInfo.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx.cs">
-      <DependentUpon>DismissOrChangeStaffInfo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx.designer.cs">
-      <DependentUpon>DismissOrChangeStaffInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\InfoManagement.aspx.cs">
       <DependentUpon>InfoManagement.aspx</DependentUpon>

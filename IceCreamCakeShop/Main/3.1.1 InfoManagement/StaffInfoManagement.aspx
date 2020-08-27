@@ -24,8 +24,4 @@
     </asp:GridView>
     <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EntityTypeName="" TableName="Staffinfo">
     </asp:LinqDataSource>
-    <br />
-    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="添加员工" />
-&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="解雇/修改" />
 </asp:Content>
