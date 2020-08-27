@@ -1,17 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._0_Login.Login" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._0_Login.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div runat="server">
 
         <table style="width: 100%">
             <tr>
-                <td colspan="2" style="text-align: center">
-                    <asp:Label ID="Label1" runat="server" Font-Size="Larger" Text="登录"></asp:Label>
+                <td colspan="2" style="text-align: center" class="auto-style1">
+                    登录&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style1"></td>
+                <td class="auto-style1"></td>
+                <td class="auto-style1"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -21,15 +19,15 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="text-align: right">
+                <td style="text-align: right" class="auto-style2">
                     <asp:Label ID="Label2" runat="server" Text="手机号："></asp:Label>
                 </td>
-                <td>
+                <td class="auto-style2">
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
+                <td class="auto-style2"></td>
+                <td class="auto-style2"></td>
+                <td class="auto-style2"></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -76,3 +74,16 @@
 
     </div>
 </asp:Content>
+
+<asp:Content ID="Content2" runat="server" contentplaceholderid="head">
+    <style type="text/css">
+    .auto-style1 {
+        height: 28px;
+    }
+    .auto-style2 {
+        height: 23px;
+    }
+</style>
+</asp:Content>
+
+
