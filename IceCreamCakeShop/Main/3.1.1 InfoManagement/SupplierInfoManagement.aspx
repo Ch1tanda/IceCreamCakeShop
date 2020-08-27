@@ -15,5 +15,10 @@
         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableUpdate="True" EntityTypeName="" TableName="Supplierinfo">
         </asp:LinqDataSource>
 
+        <br />
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="添加供应商" />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="删除/修改" />
+
     </div>
 </asp:Content>

@@ -39,13 +39,13 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="text-align: right">
+                <td style="text-align: right; height: 26px;">
                     <asp:Label ID="Label1" runat="server" Text="名称："></asp:Label>
                 </td>
-                <td>
+                <td style="height: 26px">
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td style="height: 26px"></td>
             </tr>
             <tr>
                 <td style="text-align: right">&nbsp;</td>
