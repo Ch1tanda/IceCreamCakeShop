@@ -28,6 +28,8 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                     if (staff.password.Equals(TextBox2.Text))
                     {
                         //Response.Write("<script>alert('登录成功！')</script>");
+                        Session["position"] = "staff";
+                        Session["name"] = staff.name;
                         Response.Redirect("~/Main/3.1.4 CakeMakeManagement/CakeMakeManagement.aspx");
                     }
                     else
