@@ -53,7 +53,9 @@
         <div id="MainPage" class="MainPage">
             <div id="TopMain" class="TopMain">
                 <div id="TopMessage" class="TopMessage">
-                    <p>额外工具栏</p>
+                    
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                    
                 </div>
                 <div id="Logo" class="Logo">
                     <p">这里以后是LOGO的图片</p>
