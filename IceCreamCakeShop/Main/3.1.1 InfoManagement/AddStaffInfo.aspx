@@ -50,7 +50,6 @@
                     <asp:RadioButtonList ID="SexRDL" runat="server" AutoPostBack="True" RepeatDirection="Horizontal">
                         <asp:ListItem>男</asp:ListItem>
                         <asp:ListItem>女</asp:ListItem>
-                        <asp:ListItem Selected="True">伪娘</asp:ListItem>
                     </asp:RadioButtonList>
                 </td>
                 <td style="height: 24px"></td>
