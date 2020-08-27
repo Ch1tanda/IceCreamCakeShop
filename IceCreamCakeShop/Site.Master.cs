@@ -12,13 +12,7 @@ namespace IceCreamCakeShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                if (Session["position"].ToString() == "staff")
-                {
-                    this.Label1.Text = "欢迎你," + Session["name"];
-                }
-            }
+          
         }
     }
 }
