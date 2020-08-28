@@ -138,6 +138,7 @@
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Index.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx" />
+    <Content Include="Main\3.1.1 InfoManagement\AddSupplierInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\InfoManagement.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\StaffInfoManagement.aspx" />
@@ -252,6 +253,13 @@
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx.designer.cs">
       <DependentUpon>AddStaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.1 InfoManagement\AddSupplierInfo.aspx.cs">
+      <DependentUpon>AddSupplierInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.1 InfoManagement\AddSupplierInfo.aspx.designer.cs">
+      <DependentUpon>AddSupplierInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx.cs">
       <DependentUpon>DismissOrChangeStaffInfo.aspx</DependentUpon>

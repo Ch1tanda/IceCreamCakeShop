@@ -13,5 +13,10 @@ namespace IceCreamCakeShop.Main._3._1._1_InfoManagement
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddSupplierInfo.aspx");
+        }
     }
 }

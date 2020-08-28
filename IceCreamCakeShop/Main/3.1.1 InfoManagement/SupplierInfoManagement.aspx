@@ -12,6 +12,7 @@
                 <asp:BoundField DataField="tel" HeaderText="联系电话" SortExpression="tel" />
             </Columns>
         </asp:GridView>
+        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="添加供应商" />
         <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableUpdate="True" EntityTypeName="" TableName="Supplierinfo">
         </asp:LinqDataSource>
 
