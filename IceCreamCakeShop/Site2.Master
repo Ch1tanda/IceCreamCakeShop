@@ -37,7 +37,7 @@
             border-color:yellow;
         }
         .PlaceHolder{
-            float:right;width:1663px;
+            float:right;width:1890px;
             height:830px;
             background-color:antiquewhite;
             border-style:solid;
