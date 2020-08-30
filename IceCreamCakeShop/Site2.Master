@@ -10,18 +10,18 @@
     </asp:ContentPlaceHolder>
     <style>
         .MainPage{
-            width:1920px;
+            width:1890px;
             height:960px;
         }
         .TopMain{
-            width:1920px;
+            width:1890px;
             height:150px;
             background-color:deepskyblue;
             border-style:solid;
             border-color:yellow;
         }
         .TopMessage{
-            width:1920px;
+            width:1890px;
             height:22px;
             background-color:deepskyblue;
         }
@@ -37,7 +37,7 @@
             border-color:yellow;
         }
         .PlaceHolder{
-            width:1920px;
+            float:right;width:1663px;
             height:830px;
             background-color:antiquewhite;
             border-style:solid;
