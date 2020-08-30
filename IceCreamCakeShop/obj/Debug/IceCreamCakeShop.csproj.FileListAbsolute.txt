@@ -149,7 +149,6 @@ D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.Cor
 D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CopyComplete
 D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.dll
 D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.pdb
-D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csprojAssemblyReference.cache
 D:\shixi\IceCreamCakeShop\bin\IceCreamCakeShop.dll.config
 D:\shixi\IceCreamCakeShop\bin\IceCreamCakeShop.dll
 D:\shixi\IceCreamCakeShop\bin\IceCreamCakeShop.pdb

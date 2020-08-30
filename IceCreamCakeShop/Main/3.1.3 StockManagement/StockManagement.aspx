@@ -21,5 +21,5 @@
         <SortedDescendingCellStyle BackColor="#EAEAD3" />
         <SortedDescendingHeaderStyle BackColor="#575357" />
 </asp:GridView>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream Cake ShopConnectionString %>" SelectCommand="SELECT [mid], [stock], [name] FROM [Stock]"></asp:SqlDataSource>
+<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT [mid], [stock], [name] FROM [Stock]"></asp:SqlDataSource>
 </asp:Content>

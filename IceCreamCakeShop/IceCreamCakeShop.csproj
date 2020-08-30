@@ -148,7 +148,9 @@
     <Content Include="Main\3.1.3 StockManagement\StockManagement.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\CakeMakeManagement.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\addCake.aspx" />
+    <Content Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx" />
     <Content Include="Main\3.1.6 DessertManagement\DessertManagement.aspx" />
+    <Content Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx" />
     <Content Include="public\picture\index.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
@@ -324,12 +326,26 @@
     <Compile Include="Main\3.1.4 CakeMakeManagement\addCake.aspx.designer.cs">
       <DependentUpon>addCake.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx.cs">
+      <DependentUpon>CakeReserve.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx.designer.cs">
+      <DependentUpon>CakeReserve.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Main\3.1.6 DessertManagement\DessertManagement.aspx.cs">
       <DependentUpon>DessertManagement.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Main\3.1.6 DessertManagement\DessertManagement.aspx.designer.cs">
       <DependentUpon>DessertManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx.cs">
+      <DependentUpon>DessertReminder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx.designer.cs">
+      <DependentUpon>DessertReminder.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx.cs">
       <DependentUpon>RoutineManagement.aspx</DependentUpon>

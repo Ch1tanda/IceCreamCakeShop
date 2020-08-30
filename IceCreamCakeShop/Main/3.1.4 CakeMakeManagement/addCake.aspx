@@ -57,7 +57,8 @@
                     <asp:Label ID="Label2" runat="server" Text="配方："></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="TextBox2" runat="server" Width="405px"></asp:TextBox>
+                    <asp:TextBox ID="TextBox2" runat="server" Width="405px" AutoPostBack="True" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
+                    <asp:Label ID="Label7" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>

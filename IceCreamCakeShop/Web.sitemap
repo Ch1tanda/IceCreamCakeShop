@@ -15,16 +15,14 @@
 			</siteMapNode>
 		</siteMapNode>
 		<siteMapNode url="Main/3.1.4 CakeMakeManagement/CakeMakeManagement.aspx" title="蛋糕/点心管理"  description="">
-			<siteMapNode url="" title=""  description="">
-			</siteMapNode>
+			<siteMapNode url="Main/3.1.4 CakeMakeManagement/CakeReserve.aspx" title="预订管理"  description="" />
 		</siteMapNode>
 		<siteMapNode url="Main/3.1.6 DessertManagement/DessertManagement.aspx" title="点心出入库管理"  description="">
 			<siteMapNode url="" title=""  description="">
 			</siteMapNode>
 		</siteMapNode>
 		<siteMapNode url="Main/3.1.7 RoutineManagement/RoutineManagement.aspx" title="事务提醒管理"  description="">
-			<siteMapNode url="" title=""  description="">
-			</siteMapNode>
+			<siteMapNode url="Main/3.1.7 RoutineManagement/DessertReminder.aspx" title="点心库存提醒"  description="" />
 		</siteMapNode>
 	</siteMapNode>
 </siteMap>

@@ -13,15 +13,18 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
         {
             DataClasses1DataContext dc = new DataClasses1DataContext();
             List<Cakeinfo> cakeinfos = new List<Cakeinfo>();
-            string cid = "";
+            //string cid = "";
             List<Cakeinfo> cake = dc.Cakeinfo.Where(p => p.id.Contains(RadioButtonList1.SelectedValue)).ToList();
             foreach (var item in cake)
             {
                 cakeinfos.Add(item);
             }
-            int newone = cake.Count() + 1;
-            cid = RadioButtonList1.SelectedValue + "00" + newone.ToString();
-            Label5.Text = cid;
+            //int newone = cake.Count() + 1;
+            char c = cake.Last().id.Last();
+            int nc = int.Parse(c.ToString()) + 1;
+            string newone = cake.Last().id.Substring(0, cake.Last().id.Length-1);
+            newone += nc;
+            Label5.Text = newone;
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -30,18 +33,35 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
             var id = Label5.Text;
             DataClasses1DataContext dc = new DataClasses1DataContext();
             Cakeinfo newCake = new Cakeinfo();
+            Stock newStock = new Stock();
             newCake.id = id;
+            newStock.mid = id;
             newCake.name = TextBox1.Text.Trim();
+            newStock.name = newCake.name;
             newCake.recipe = TextBox2.Text.Trim();
             newCake.price = Convert.ToDecimal(TextBox3.Text);
+            newStock.stock = 0;
             dc.Cakeinfo.InsertOnSubmit(newCake);
+            dc.Stock.InsertOnSubmit(newStock);
             dc.SubmitChanges();
             Response.Redirect("CakeMakeManagement.aspx");
         }
 
         protected void TextBox2_TextChanged(object sender, EventArgs e)
         {
-
+            String recipe = TextBox2.Text.Trim();
+            int cnt = 0;
+            for (int i = 0; i < recipe.Length; i++) 
+            {
+                if (recipe[i] == 'M')
+                    if (recipe[i + 3] == ':') 
+                        cnt++;
+            }
+            if (cnt != 10)
+                Label7.Text = "请按照格式输入配方";
+            else
+                Label7.Text = "";
         }
+
     }
 }

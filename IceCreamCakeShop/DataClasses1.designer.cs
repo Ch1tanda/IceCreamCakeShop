@@ -51,6 +51,9 @@ namespace IceCreamCakeShop
     partial void InsertUserinfo(Userinfo instance);
     partial void UpdateUserinfo(Userinfo instance);
     partial void DeleteUserinfo(Userinfo instance);
+    partial void InsertUserorder(Userorder instance);
+    partial void UpdateUserorder(Userorder instance);
+    partial void DeleteUserorder(Userorder instance);
     #endregion
 		
 		public DataClasses1DataContext() : 
@@ -162,6 +165,10 @@ namespace IceCreamCakeShop
 		
 		private string _recipe;
 		
+		private EntitySet<Userorder> _Userorder;
+		
+		private EntitySet<Userorder> _Userorder1;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -178,6 +185,8 @@ namespace IceCreamCakeShop
 		
 		public Cakeinfo()
 		{
+			this._Userorder = new EntitySet<Userorder>(new Action<Userorder>(this.attach_Userorder), new Action<Userorder>(this.detach_Userorder));
+			this._Userorder1 = new EntitySet<Userorder>(new Action<Userorder>(this.attach_Userorder1), new Action<Userorder>(this.detach_Userorder1));
 			OnCreated();
 		}
 		
@@ -261,6 +270,32 @@ namespace IceCreamCakeShop
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Userorder", Storage="_Userorder", ThisKey="id", OtherKey="cdid")]
+		public EntitySet<Userorder> Userorder
+		{
+			get
+			{
+				return this._Userorder;
+			}
+			set
+			{
+				this._Userorder.Assign(value);
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Userorder1", Storage="_Userorder1", ThisKey="id", OtherKey="cdid")]
+		public EntitySet<Userorder> Userorder1
+		{
+			get
+			{
+				return this._Userorder1;
+			}
+			set
+			{
+				this._Userorder1.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -279,6 +314,30 @@ namespace IceCreamCakeShop
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
+		}
+		
+		private void attach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cakeinfo = this;
+		}
+		
+		private void detach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cakeinfo = null;
+		}
+		
+		private void attach_Userorder1(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cakeinfo1 = this;
+		}
+		
+		private void detach_Userorder1(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Cakeinfo1 = null;
 		}
 	}
 	
@@ -457,6 +516,8 @@ namespace IceCreamCakeShop
 		
 		private EntitySet<Supplierorder> _Supplierorder;
 		
+		private EntitySet<Userorder> _Userorder;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -482,6 +543,7 @@ namespace IceCreamCakeShop
 		public Staffinfo()
 		{
 			this._Supplierorder = new EntitySet<Supplierorder>(new Action<Supplierorder>(this.attach_Supplierorder), new Action<Supplierorder>(this.detach_Supplierorder));
+			this._Userorder = new EntitySet<Userorder>(new Action<Userorder>(this.attach_Userorder), new Action<Userorder>(this.detach_Userorder));
 			OnCreated();
 		}
 		
@@ -658,6 +720,19 @@ namespace IceCreamCakeShop
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Staffinfo_Userorder", Storage="_Userorder", ThisKey="id", OtherKey="staffid")]
+		public EntitySet<Userorder> Userorder
+		{
+			get
+			{
+				return this._Userorder;
+			}
+			set
+			{
+				this._Userorder.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -689,6 +764,18 @@ namespace IceCreamCakeShop
 			this.SendPropertyChanging();
 			entity.Staffinfo = null;
 		}
+		
+		private void attach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Staffinfo = this;
+		}
+		
+		private void detach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Staffinfo = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Stock")]
@@ -701,7 +788,7 @@ namespace IceCreamCakeShop
 		
 		private string _name;
 		
-		private int _stock1;
+		private int _stock;
 		
     #region 可扩展性方法定义
     partial void OnLoaded();
@@ -711,8 +798,8 @@ namespace IceCreamCakeShop
     partial void OnmidChanged();
     partial void OnnameChanging(string value);
     partial void OnnameChanged();
-    partial void Onstock1Changing(int value);
-    partial void Onstock1Changed();
+    partial void OnstockChanging(int value);
+    partial void OnstockChanged();
     #endregion
 		
 		public Stock()
@@ -760,22 +847,22 @@ namespace IceCreamCakeShop
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="stock", Storage="_stock1", DbType="Int NOT NULL")]
-		public int stock1
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_stock", DbType="Int NOT NULL")]
+		public int stock
 		{
 			get
 			{
-				return this._stock1;
+				return this._stock;
 			}
 			set
 			{
-				if ((this._stock1 != value))
+				if ((this._stock != value))
 				{
-					this.Onstock1Changing(value);
+					this.OnstockChanging(value);
 					this.SendPropertyChanging();
-					this._stock1 = value;
-					this.SendPropertyChanged("stock1");
-					this.Onstock1Changed();
+					this._stock = value;
+					this.SendPropertyChanged("stock");
+					this.OnstockChanged();
 				}
 			}
 		}
@@ -1281,6 +1368,8 @@ namespace IceCreamCakeShop
 		
 		private decimal _gmv;
 		
+		private EntitySet<Userorder> _Userorder;
+		
     #region 可扩展性方法定义
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1305,6 +1394,7 @@ namespace IceCreamCakeShop
 		
 		public Userinfo()
 		{
+			this._Userorder = new EntitySet<Userorder>(new Action<Userorder>(this.attach_Userorder), new Action<Userorder>(this.detach_Userorder));
 			OnCreated();
 		}
 		
@@ -1468,6 +1558,19 @@ namespace IceCreamCakeShop
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userinfo_Userorder", Storage="_Userorder", ThisKey="id", OtherKey="userid")]
+		public EntitySet<Userorder> Userorder
+		{
+			get
+			{
+				return this._Userorder;
+			}
+			set
+			{
+				this._Userorder.Assign(value);
+			}
+		}
+		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -1487,11 +1590,25 @@ namespace IceCreamCakeShop
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
+		
+		private void attach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userinfo = this;
+		}
+		
+		private void detach_Userorder(Userorder entity)
+		{
+			this.SendPropertyChanging();
+			entity.Userinfo = null;
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Userorder")]
-	public partial class Userorder
+	public partial class Userorder : INotifyPropertyChanging, INotifyPropertyChanged
 	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 		
 		private string _id;
 		
@@ -1507,11 +1624,44 @@ namespace IceCreamCakeShop
 		
 		private System.DateTime _time;
 		
+		private EntityRef<Cakeinfo> _Cakeinfo;
+		
+		private EntityRef<Cakeinfo> _Cakeinfo1;
+		
+		private EntityRef<Staffinfo> _Staffinfo;
+		
+		private EntityRef<Userinfo> _Userinfo;
+		
+    #region 可扩展性方法定义
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnidChanging(string value);
+    partial void OnidChanged();
+    partial void OnuseridChanging(string value);
+    partial void OnuseridChanged();
+    partial void OnstaffidChanging(string value);
+    partial void OnstaffidChanged();
+    partial void OncdidChanging(string value);
+    partial void OncdidChanged();
+    partial void OnnumberChanging(int value);
+    partial void OnnumberChanged();
+    partial void OnpriceChanging(decimal value);
+    partial void OnpriceChanged();
+    partial void OntimeChanging(System.DateTime value);
+    partial void OntimeChanged();
+    #endregion
+		
 		public Userorder()
 		{
+			this._Cakeinfo = default(EntityRef<Cakeinfo>);
+			this._Cakeinfo1 = default(EntityRef<Cakeinfo>);
+			this._Staffinfo = default(EntityRef<Staffinfo>);
+			this._Userinfo = default(EntityRef<Userinfo>);
+			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(50) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="VarChar(50) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string id
 		{
 			get
@@ -1522,7 +1672,11 @@ namespace IceCreamCakeShop
 			{
 				if ((this._id != value))
 				{
+					this.OnidChanging(value);
+					this.SendPropertyChanging();
 					this._id = value;
+					this.SendPropertyChanged("id");
+					this.OnidChanged();
 				}
 			}
 		}
@@ -1538,7 +1692,15 @@ namespace IceCreamCakeShop
 			{
 				if ((this._userid != value))
 				{
+					if (this._Userinfo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnuseridChanging(value);
+					this.SendPropertyChanging();
 					this._userid = value;
+					this.SendPropertyChanged("userid");
+					this.OnuseridChanged();
 				}
 			}
 		}
@@ -1554,7 +1716,15 @@ namespace IceCreamCakeShop
 			{
 				if ((this._staffid != value))
 				{
+					if (this._Staffinfo.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnstaffidChanging(value);
+					this.SendPropertyChanging();
 					this._staffid = value;
+					this.SendPropertyChanged("staffid");
+					this.OnstaffidChanged();
 				}
 			}
 		}
@@ -1570,7 +1740,15 @@ namespace IceCreamCakeShop
 			{
 				if ((this._cdid != value))
 				{
+					if ((this._Cakeinfo.HasLoadedOrAssignedValue || this._Cakeinfo1.HasLoadedOrAssignedValue))
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OncdidChanging(value);
+					this.SendPropertyChanging();
 					this._cdid = value;
+					this.SendPropertyChanged("cdid");
+					this.OncdidChanged();
 				}
 			}
 		}
@@ -1586,7 +1764,11 @@ namespace IceCreamCakeShop
 			{
 				if ((this._number != value))
 				{
+					this.OnnumberChanging(value);
+					this.SendPropertyChanging();
 					this._number = value;
+					this.SendPropertyChanged("number");
+					this.OnnumberChanged();
 				}
 			}
 		}
@@ -1602,7 +1784,11 @@ namespace IceCreamCakeShop
 			{
 				if ((this._price != value))
 				{
+					this.OnpriceChanging(value);
+					this.SendPropertyChanging();
 					this._price = value;
+					this.SendPropertyChanged("price");
+					this.OnpriceChanged();
 				}
 			}
 		}
@@ -1618,8 +1804,168 @@ namespace IceCreamCakeShop
 			{
 				if ((this._time != value))
 				{
+					this.OntimeChanging(value);
+					this.SendPropertyChanging();
 					this._time = value;
+					this.SendPropertyChanged("time");
+					this.OntimeChanged();
 				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Userorder", Storage="_Cakeinfo", ThisKey="cdid", OtherKey="id", IsForeignKey=true)]
+		public Cakeinfo Cakeinfo
+		{
+			get
+			{
+				return this._Cakeinfo.Entity;
+			}
+			set
+			{
+				Cakeinfo previousValue = this._Cakeinfo.Entity;
+				if (((previousValue != value) 
+							|| (this._Cakeinfo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cakeinfo.Entity = null;
+						previousValue.Userorder.Remove(this);
+					}
+					this._Cakeinfo.Entity = value;
+					if ((value != null))
+					{
+						value.Userorder.Add(this);
+						this._cdid = value.id;
+					}
+					else
+					{
+						this._cdid = default(string);
+					}
+					this.SendPropertyChanged("Cakeinfo");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Cakeinfo_Userorder1", Storage="_Cakeinfo1", ThisKey="cdid", OtherKey="id", IsForeignKey=true)]
+		public Cakeinfo Cakeinfo1
+		{
+			get
+			{
+				return this._Cakeinfo1.Entity;
+			}
+			set
+			{
+				Cakeinfo previousValue = this._Cakeinfo1.Entity;
+				if (((previousValue != value) 
+							|| (this._Cakeinfo1.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Cakeinfo1.Entity = null;
+						previousValue.Userorder1.Remove(this);
+					}
+					this._Cakeinfo1.Entity = value;
+					if ((value != null))
+					{
+						value.Userorder1.Add(this);
+						this._cdid = value.id;
+					}
+					else
+					{
+						this._cdid = default(string);
+					}
+					this.SendPropertyChanged("Cakeinfo1");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Staffinfo_Userorder", Storage="_Staffinfo", ThisKey="staffid", OtherKey="id", IsForeignKey=true)]
+		public Staffinfo Staffinfo
+		{
+			get
+			{
+				return this._Staffinfo.Entity;
+			}
+			set
+			{
+				Staffinfo previousValue = this._Staffinfo.Entity;
+				if (((previousValue != value) 
+							|| (this._Staffinfo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Staffinfo.Entity = null;
+						previousValue.Userorder.Remove(this);
+					}
+					this._Staffinfo.Entity = value;
+					if ((value != null))
+					{
+						value.Userorder.Add(this);
+						this._staffid = value.id;
+					}
+					else
+					{
+						this._staffid = default(string);
+					}
+					this.SendPropertyChanged("Staffinfo");
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Userinfo_Userorder", Storage="_Userinfo", ThisKey="userid", OtherKey="id", IsForeignKey=true)]
+		public Userinfo Userinfo
+		{
+			get
+			{
+				return this._Userinfo.Entity;
+			}
+			set
+			{
+				Userinfo previousValue = this._Userinfo.Entity;
+				if (((previousValue != value) 
+							|| (this._Userinfo.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Userinfo.Entity = null;
+						previousValue.Userorder.Remove(this);
+					}
+					this._Userinfo.Entity = value;
+					if ((value != null))
+					{
+						value.Userorder.Add(this);
+						this._userid = value.id;
+					}
+					else
+					{
+						this._userid = default(string);
+					}
+					this.SendPropertyChanged("Userinfo");
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
 	}

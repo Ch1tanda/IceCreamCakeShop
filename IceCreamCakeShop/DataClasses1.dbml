@@ -7,6 +7,7 @@
       <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
       <Column Name="recipe" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
       <Association Name="Cakeinfo_Userorder" Member="Userorder" ThisKey="id" OtherKey="cdid" Type="Userorder" />
+      <Association Name="Cakeinfo_Userorder1" Member="Userorder1" ThisKey="id" OtherKey="cdid" Type="Userorder" />
     </Type>
   </Table>
   <Table Name="dbo.Goods" Member="Goods">
@@ -35,7 +36,7 @@
     <Type Name="Stock">
       <Column Name="mid" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
-      <Column Name="stock" Member="stock1" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
     </Type>
   </Table>
   <Table Name="dbo.Supplierinfo" Member="Supplierinfo">
@@ -75,7 +76,7 @@
   </Table>
   <Table Name="dbo.Userorder" Member="Userorder">
     <Type Name="Userorder">
-      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="userid" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
       <Column Name="staffid" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
       <Column Name="cdid" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
@@ -83,6 +84,7 @@
       <Column Name="price" Type="System.Decimal" DbType="Decimal(10,2) NOT NULL" CanBeNull="false" />
       <Column Name="time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
       <Association Name="Cakeinfo_Userorder" Member="Cakeinfo" ThisKey="cdid" OtherKey="id" Type="Cakeinfo" IsForeignKey="true" />
+      <Association Name="Cakeinfo_Userorder1" Member="Cakeinfo1" ThisKey="cdid" OtherKey="id" Type="Cakeinfo" IsForeignKey="true" />
       <Association Name="Staffinfo_Userorder" Member="Staffinfo" ThisKey="staffid" OtherKey="id" Type="Staffinfo" IsForeignKey="true" />
       <Association Name="Userinfo_Userorder" Member="Userinfo" ThisKey="userid" OtherKey="id" Type="Userinfo" IsForeignKey="true" />
     </Type>
