@@ -157,6 +157,7 @@
     <Content Include="Main\3.1.8 UserMain\OrderSearch.aspx" />
     <Content Include="Main\3.1.8 UserMain\Profile.aspx" />
     <Content Include="Main\3.1.8 UserMain\ProfileModify.aspx" />
+    <Content Include="Main\3.1.8 UserMain\PasswordModify.aspx" />
     <Content Include="public\picture\index.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -394,6 +395,13 @@
     </Compile>
     <Compile Include="Main\3.1.8 UserMain\ProfileModify.aspx.designer.cs">
       <DependentUpon>ProfileModify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\PasswordModify.aspx.cs">
+      <DependentUpon>PasswordModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\PasswordModify.aspx.designer.cs">
+      <DependentUpon>PasswordModify.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

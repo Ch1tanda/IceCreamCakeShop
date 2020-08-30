@@ -41,8 +41,11 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
             else
             {
                 if (user.password.Equals(TextBox2.Text))
-                {
+                {   
                     Response.Write("<script>alert('登录成功！')</script>");
+                    Session["position"] = "user";
+                    Session["name"] = user.username;
+                    Response.Redirect("../3.1.8 UserMain/CakeDessertPurchase.aspx");
                 }
                 else
                 {

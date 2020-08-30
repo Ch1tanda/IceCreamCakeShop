@@ -56,6 +56,28 @@
             width:400px;
             height:22px;
         }
+        .MessageBorder{
+            width:1890px;
+            height:40px;
+        }
+        .MessageBorderLeft{
+            text-align:right;
+            width:700px;
+            height:40px;
+            float:left;
+            line-height:40px;
+        }
+        .MessageBorderRight{
+            width:1190px;
+            height:40px;
+            float:right;
+            line-height:40px;
+        }
+        .ProfileButton{
+            background-color:white;
+            border-color:black;
+            width:70px;
+        }
         </style>
 </head>
 <body>
@@ -67,7 +89,7 @@
                 </div>
                 <div id="TopProfile" class="TopProfile">
                 
-                    <asp:Button ID="Button1" runat="server" Text="历史订单" class="button"/>
+                    <asp:Button ID="Button1" runat="server" Text="历史订单" class="button" OnClick="Button1_Click1"/>
                 
                     <asp:Button ID="Button2" runat="server" Text="个人信息" class="button" OnClick="Button2_Click1"/>
                 
