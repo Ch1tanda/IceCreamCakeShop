@@ -153,6 +153,10 @@
     <Content Include="Main\3.1.6 DessertManagement\DessertManagement.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx" />
+    <Content Include="Main\3.1.8 UserMain\CakeDessertPurchase.aspx" />
+    <Content Include="Main\3.1.8 UserMain\OrderSearch.aspx" />
+    <Content Include="Main\3.1.8 UserMain\Profile.aspx" />
+    <Content Include="Main\3.1.8 UserMain\ProfileModify.aspx" />
     <Content Include="public\picture\index.jpeg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -190,6 +194,7 @@
     <Content Include="web.config" />
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />
+    <Content Include="Site3.Master" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
@@ -362,6 +367,34 @@
     <Compile Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx.designer.cs">
       <DependentUpon>RoutineManagement.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Main\3.1.8 UserMain\CakeDessertPurchase.aspx.cs">
+      <DependentUpon>CakeDessertPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\CakeDessertPurchase.aspx.designer.cs">
+      <DependentUpon>CakeDessertPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\OrderSearch.aspx.cs">
+      <DependentUpon>OrderSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\OrderSearch.aspx.designer.cs">
+      <DependentUpon>OrderSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\Profile.aspx.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\Profile.aspx.designer.cs">
+      <DependentUpon>Profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\ProfileModify.aspx.cs">
+      <DependentUpon>ProfileModify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.8 UserMain\ProfileModify.aspx.designer.cs">
+      <DependentUpon>ProfileModify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -388,6 +421,13 @@
     </Compile>
     <Compile Include="Site2.Master.designer.cs">
       <DependentUpon>Site2.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site3.Master.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site3.Master.designer.cs">
+      <DependentUpon>Site3.Master</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
