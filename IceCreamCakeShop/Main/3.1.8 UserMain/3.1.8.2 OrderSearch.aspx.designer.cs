@@ -11,7 +11,7 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
 {
 
 
-    public partial class WebForm2
+    public partial class WebForm5
     {
     }
 }
