@@ -14,19 +14,24 @@ namespace IceCreamCakeShop
 
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("./Main/3.1.8 UserMain/3.1.8.1 CakeDessertPurchase.aspx");
-        }
-
-        protected void Button2_Click1(object sender, EventArgs e)
+        protected void Button3_Click(object sender, EventArgs e)
         {
             Response.Redirect("Profile.aspx");
         }
 
-        protected void Button1_Click1(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("PasswordModify.aspx");
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("OrderSearch.aspx");
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CakeDessertPurchase.aspx");
         }
     }
 }

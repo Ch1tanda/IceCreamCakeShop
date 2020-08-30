@@ -44,6 +44,7 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
             user.address = TextBox3.Text;
             user.birthday = TextBox4.Text;
             dc.SubmitChanges();
+            Session["name"] = user.username;
             Response.Redirect("Profile.aspx");
         }
     }
