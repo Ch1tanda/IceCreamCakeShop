@@ -21,25 +21,25 @@
         </div>
     </div>
     <div class="MessageBorder">
-        <div class="MessageBorderLeft">家庭住址:&nbsp;</div>
+    <div class="MessageBorderLeft">家庭住址:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
         </div>
     </div>
     <div class="MessageBorder">
-        <div class="MessageBorderLeft">生日:&nbsp;</div>
+    <div class="MessageBorderLeft">生日:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:Label ID="Label5" runat="server" Text="Label"></asp:Label>
         </div>
     </div>
     <div class="MessageBorder">
-        <div class="MessageBorderLeft">VIP种类:&nbsp;</div>
+    <div class="MessageBorderLeft">VIP种类:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
         </div>
     </div>
     <div class="MessageBorder">
-        <div class="MessageBorderLeft">消费总值:&nbsp;</div>
+    <div class="MessageBorderLeft">消费总值:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:Label ID="Label7" runat="server" Text="Label"></asp:Label>
         </div>

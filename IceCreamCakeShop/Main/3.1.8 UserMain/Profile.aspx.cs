@@ -37,7 +37,7 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
 
         protected void Button3_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("ProfileModify.aspx");
         }
     }
 }
