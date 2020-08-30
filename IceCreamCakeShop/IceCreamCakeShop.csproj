@@ -149,6 +149,7 @@
     <Content Include="Main\3.1.4 CakeMakeManagement\CakeMakeManagement.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\addCake.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx" />
+    <Content Include="Main\3.1.4 CakeMakeManagement\editCake.aspx" />
     <Content Include="Main\3.1.6 DessertManagement\DessertManagement.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx" />
@@ -332,6 +333,13 @@
     </Compile>
     <Compile Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx.designer.cs">
       <DependentUpon>CakeReserve.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.4 CakeMakeManagement\editCake.aspx.cs">
+      <DependentUpon>editCake.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.4 CakeMakeManagement\editCake.aspx.designer.cs">
+      <DependentUpon>editCake.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.6 DessertManagement\DessertManagement.aspx.cs">
       <DependentUpon>DessertManagement.aspx</DependentUpon>

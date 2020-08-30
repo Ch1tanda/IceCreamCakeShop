@@ -45,6 +45,12 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
             GridView1.DataBind();
         }
 
-
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName.Equals("edit"))
+            {
+                Response.Redirect($"editCake.aspx?productID={e.CommandArgument}");
+            }
+        }
     }
 }

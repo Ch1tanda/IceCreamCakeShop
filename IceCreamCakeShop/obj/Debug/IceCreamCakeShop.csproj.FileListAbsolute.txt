@@ -453,3 +453,4 @@ C:\Users\11376\Documents\GitHub\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceC
 C:\Users\11376\Documents\GitHub\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csproj.CopyComplete
 C:\Users\11376\Documents\GitHub\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.dll
 C:\Users\11376\Documents\GitHub\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.pdb
+D:\shixi\IceCreamCakeShop\IceCreamCakeShop\obj\Debug\IceCreamCakeShop.csprojAssemblyReference.cache
