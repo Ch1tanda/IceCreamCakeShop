@@ -83,9 +83,21 @@
                     </asp:DropDownList>
                     <asp:Label ID="Label8" runat="server" Text="年"></asp:Label>
                     <asp:DropDownList ID="DropDownList2" runat="server">
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                        <asp:ListItem>4</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>7</asp:ListItem>
+                        <asp:ListItem>8</asp:ListItem>
+                        <asp:ListItem>9</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>11</asp:ListItem>
+                        <asp:ListItem>12</asp:ListItem>
                     </asp:DropDownList>
                     <asp:Label ID="Label9" runat="server" Text="月"></asp:Label>
-                    <asp:DropDownList ID="DropDownList3" runat="server">
+                    <asp:DropDownList ID="DropDownList3" runat="server" OnSelectedIndexChanged="DropDownList3_SelectedIndexChanged">
                     </asp:DropDownList>
                     <asp:Label ID="Label10" runat="server" Text="日"></asp:Label>
                 </td>

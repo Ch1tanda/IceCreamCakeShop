@@ -13,6 +13,10 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
         {
 
         }
-        
+
+        protected void DropDownList3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
