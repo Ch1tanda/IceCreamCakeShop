@@ -16,6 +16,27 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
                 Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
             }
         }
+        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Search();
+        }
+        protected void Search()
+        {
+            var cate = RadioButtonList1.SelectedValue;
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            List<Cakeinfo> cakeinfos = dc.Cakeinfo.Where(p => p.id.Contains(cate)).ToList();
+            GridView1.DataSourceID = null;
+            GridView1.DataSource = cakeinfos;
+            GridView1.DataBind();
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("buy"))
+            {
+                Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");
+            }
+        }
         protected void UpdateVip(string id, decimal cmv)
         {
             DataClasses1DataContext dc = new DataClasses1DataContext();

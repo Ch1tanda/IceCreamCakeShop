@@ -7,11 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace IceCreamCakeShop.Main._3._1._8_UserMain
+namespace IceCreamCakeShop.Main
 {
 
 
-    public partial class WebForm1
+    public partial class index
     {
 
         /// <summary>

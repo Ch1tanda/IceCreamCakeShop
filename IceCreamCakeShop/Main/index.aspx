@@ -1,8 +1,16 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="CakeDessertPurchase.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._8_UserMain.WebForm1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="IceCreamCakeShop.Main.index" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 85px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <table class="auto-style1">
+    <table class="auto-style1">
         <tr>
             <td class="auto-style2">&nbsp;</td>
             <td>&nbsp;</td>
