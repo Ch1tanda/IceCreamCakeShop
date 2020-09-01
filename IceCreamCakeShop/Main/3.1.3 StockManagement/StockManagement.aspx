@@ -1,25 +1,45 @@
-<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StockManagement.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._3_StockManagement.StockManagement" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="StockManagement.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._3_StockManagement.StockManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Label ID="Label1" runat="server" Font-Size="30px" Text="库存信息"></asp:Label>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1" AllowPaging="True" AllowSorting="True" BackColor="White" BorderColor="#DEDFDE" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Vertical">
-        <AlternatingRowStyle BackColor="White" />
-    <Columns>
-        <asp:CommandField ShowEditButton="True" />
-        <asp:BoundField DataField="mid" HeaderText="材料ID" ReadOnly="True" SortExpression="mid" />
-        <asp:BoundField DataField="stock" HeaderText="材料数量" SortExpression="stock" />
-        <asp:BoundField DataField="name" HeaderText="材料名称" SortExpression="name" />
-    </Columns>
-        <FooterStyle BackColor="#CCCC99" />
-        <HeaderStyle BackColor="#6B696B" Font-Bold="True" ForeColor="White" />
-        <PagerStyle BackColor="#F7F7DE" ForeColor="Black" HorizontalAlign="Right" />
-        <RowStyle BackColor="#F7F7DE" />
-        <SelectedRowStyle BackColor="#CE5D5A" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#FBFBF2" />
-        <SortedAscendingHeaderStyle BackColor="#848384" />
-        <SortedDescendingCellStyle BackColor="#EAEAD3" />
-        <SortedDescendingHeaderStyle BackColor="#575357" />
-</asp:GridView>
-<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT [mid], [stock], [name] FROM [Stock]"></asp:SqlDataSource>
+    <div runat="server">
+
+        <asp:Label ID="Label2" runat="server" Font-Size="Larger" Text="库存管理"></asp:Label>
+        <br />
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 334px; float: left; clip: rect(0px, auto, auto, auto);">
+                    <asp:Label ID="Label3" runat="server" Text="原料库存"></asp:Label>
+                </td>
+                <td style="text-align: left; float: left;">
+                    <asp:Label ID="Label4" runat="server" Text="点心库存"></asp:Label>
+                </td>
+            </tr>
+            <tr>
+                <td style="float: left; clip: rect(0px, auto, auto, auto); width: 334px;">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1">
+                        <Columns>
+                            <asp:BoundField DataField="mid" HeaderText="原料id" ReadOnly="True" SortExpression="mid" />
+                            <asp:BoundField DataField="name" HeaderText="名称" SortExpression="name" />
+                            <asp:BoundField DataField="stock" HeaderText="库存" SortExpression="stock" />
+                        </Columns>
+                    </asp:GridView>
+                </td>
+                <td style="float: left; clip: rect(auto, 100px, auto, 100px);">
+                    <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource2">
+                        <Columns>
+                            <asp:BoundField DataField="mid" HeaderText="点心id" ReadOnly="True" SortExpression="mid" />
+                            <asp:BoundField DataField="name" HeaderText="名称" SortExpression="name" />
+                            <asp:BoundField DataField="stock" HeaderText="库存" SortExpression="stock" />
+                        </Columns>
+                    </asp:GridView>
+&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT Stock.* FROM Stock WHERE (mid LIKE '%d%')"></asp:SqlDataSource>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT mid, name, stock FROM Stock WHERE (mid LIKE '%m%')"></asp:SqlDataSource>
+
+    </div>
 </asp:Content>
