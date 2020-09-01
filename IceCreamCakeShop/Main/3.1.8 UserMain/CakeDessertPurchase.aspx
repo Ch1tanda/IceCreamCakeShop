@@ -5,7 +5,9 @@
         <table class="auto-style1">
         <tr>
             <td class="auto-style2">&nbsp;</td>
-            <td>&nbsp;</td>
+            <td>
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+            </td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
             <td>&nbsp;</td>
@@ -13,7 +15,7 @@
         <tr>
             <td class="auto-style2" style="vertical-align: top;">
                 <asp:RadioButtonList ID="RadioButtonList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
-                    <asp:ListItem Selected="True">全部</asp:ListItem>
+                    <asp:ListItem Selected="True" Value="0">全部</asp:ListItem>
                     <asp:ListItem Value="C">蛋糕</asp:ListItem>
                     <asp:ListItem Value="D">点心</asp:ListItem>
                 </asp:RadioButtonList>

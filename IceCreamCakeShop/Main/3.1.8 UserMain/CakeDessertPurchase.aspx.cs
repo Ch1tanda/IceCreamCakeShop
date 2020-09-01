@@ -11,6 +11,7 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Label1.Text = GridView1.Columns[0].HeaderText;
             if (Session.Count == 0)
             {
                 Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
@@ -34,45 +35,15 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
         {
             if (e.CommandName.Equals("buy"))
             {
-                Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");
+                DataClasses1DataContext dc = new DataClasses1DataContext();
+                Stock dessert = dc.Stock.Where(p => p.mid.Equals(e.CommandArgument)).FirstOrDefault();
+                if (dessert.stock <= 0) 
+                    Response.Write("<script>alert('抱歉，该商品暂时售罄。')</script>");
+                else
+                    Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");
             }
         }
-        protected void UpdateVip(string id, decimal cmv)
-        {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
-            Userinfo customer = dc.Userinfo.Where(p => p.id.Equals(id)).FirstOrDefault();
-            customer.gmv += cmv;
-            if(customer.gmv >= 100 && customer.gmv < 300)
-            {
-                customer.viptype = '1'.ToString();
-            }else if(customer.gmv >= 300 && customer.gmv < 800)
-            {
-                customer.viptype = '2'.ToString();
-            }
-            else if(customer.gmv >= 800)
-            {
-                customer.viptype = '3'.ToString();
-            }
-            dc.SubmitChanges();
-        }
-        protected float GetDiscount(string id)
-        {
-            float discount = 1F;
-            DataClasses1DataContext dc = new DataClasses1DataContext();
-            Userinfo customer = dc.Userinfo.Where(p => p.id.Equals(id)).FirstOrDefault();
-            switch (int.Parse(customer.viptype))
-            {
-                case 1:
-                    discount = 0.9F;
-                    break;
-                case 2:
-                    discount = 0.8F;
-                    break;
-                case 3:
-                    discount = 0.7F;
-                    break;
-            }
-            return discount;
-        }
+
+
     }
 }
