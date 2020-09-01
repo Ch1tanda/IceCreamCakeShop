@@ -30,6 +30,7 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                         //Response.Write("<script>alert('登录成功！')</script>");
                         Session["position"] = "staff";
                         Session["name"] = staff.name;
+                        Session["id"] = staff.id;
                         Response.Redirect("~/Main/3.1.4 CakeMakeManagement/CakeMakeManagement.aspx");
                     }
                     else
@@ -45,6 +46,7 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                     Response.Write("<script>alert('登录成功！')</script>");
                     Session["position"] = "user";
                     Session["name"] = user.username;
+                    Session["id"] = user.id;
                     Response.Redirect("../3.1.8 UserMain/CakeDessertPurchase.aspx");
                 }
                 else
