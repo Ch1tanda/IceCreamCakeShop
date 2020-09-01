@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="MessageBorder">
-    <div class="MessageBorderLeft">家庭住址:&nbsp;</div>
+    <div class="MessageBorderLeft">收货地址:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
         </div>

@@ -11,7 +11,10 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session.Count == 0)
+            {
+                Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
+            }
         }
     }
 }

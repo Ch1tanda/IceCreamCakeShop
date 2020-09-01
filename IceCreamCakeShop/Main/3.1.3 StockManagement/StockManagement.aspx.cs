@@ -13,5 +13,6 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         {
 
         }
+
     }
 }

@@ -33,8 +33,9 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
             {
                 user.password = TextBox3.Text;
                 dc.SubmitChanges();
-                Response.Redirect("Profile.aspx");
                 Response.Write("<script>alert('修改成功！');</script>");
+                Response.Redirect("Profile.aspx");
+              
             }
         }
     }

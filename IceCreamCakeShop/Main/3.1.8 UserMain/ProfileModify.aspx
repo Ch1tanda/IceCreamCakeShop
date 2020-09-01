@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="MessageBorder">
-    <div class="MessageBorderLeft">家庭住址:&nbsp;</div>
+    <div class="MessageBorderLeft">收货地址:&nbsp;</div>
         <div class="MessageBorderRight">
             
             <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>

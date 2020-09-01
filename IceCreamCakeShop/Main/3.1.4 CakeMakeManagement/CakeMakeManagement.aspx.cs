@@ -11,7 +11,14 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session.Count == 0)
+            {
+                Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
+            }
+            if (Session["position"].ToString() == "staff")
+            {
+                Label1.Text = "欢迎你" + Session["name"].ToString();
+            }
         }
 
 
