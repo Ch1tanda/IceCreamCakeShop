@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="AddStaffInfo.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._1_InfoManagement.Add" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="editStaffInfo.aspx.cs" Inherits="IceCreamCakeShop.Main._3._1._1_InfoManagement.editStaffInfo" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-     <p>
+         <p>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Text="添加员工信息"></asp:Label>
+        <asp:Label ID="Label1" runat="server" Text="修改员工信息"></asp:Label>
     </p>
         <table style="width:100%;">
             <tr>
@@ -86,13 +86,13 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td style="width: 245px">
+                <td style="width: 245px; height: 27px;">
                     <asp:Label ID="Label9" runat="server" Text="salary"></asp:Label>
                 </td>
-                <td>
+                <td style="height: 27px">
                     <asp:TextBox ID="SalaryBox" runat="server"></asp:TextBox>
                 </td>
-                <td>&nbsp;</td>
+                <td style="height: 27px"></td>
             </tr>
         </table>
     </p>

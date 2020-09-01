@@ -7,10 +7,10 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace IceCreamCakeShop.Main._3._1._0_Login {
+namespace IceCreamCakeShop.Main._3._1._1_InfoManagement {
     
     
-    public partial class Register {
+    public partial class editStaffInfo {
         
         /// <summary>
         /// Label1 控件。
@@ -31,13 +31,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// name 控件。
+        /// StaffId 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox name;
+        protected global::System.Web.UI.WebControls.Label StaffId;
         
         /// <summary>
         /// Label3 控件。
@@ -49,13 +49,31 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// password 控件。
+        /// PWBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox password;
+        protected global::System.Web.UI.WebControls.TextBox PWBox;
+        
+        /// <summary>
+        /// RPWBox 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox RPWBox;
+        
+        /// <summary>
+        /// TipPW 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label TipPW;
         
         /// <summary>
         /// Label4 控件。
@@ -67,13 +85,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// repassword 控件。
+        /// NameBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox repassword;
+        protected global::System.Web.UI.WebControls.TextBox NameBox;
         
         /// <summary>
         /// Label5 控件。
@@ -85,13 +103,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// phonenumber 控件。
+        /// SexRDL 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox phonenumber;
+        protected global::System.Web.UI.WebControls.RadioButtonList SexRDL;
         
         /// <summary>
         /// Label6 控件。
@@ -103,13 +121,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// address 控件。
+        /// AgeBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox address;
+        protected global::System.Web.UI.WebControls.TextBox AgeBox;
         
         /// <summary>
         /// Label7 控件。
@@ -121,13 +139,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label7;
         
         /// <summary>
-        /// year 控件。
+        /// PNBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox year;
+        protected global::System.Web.UI.WebControls.TextBox PNBox;
         
         /// <summary>
         /// Label8 控件。
@@ -139,13 +157,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// month 控件。
+        /// positionRDL 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox month;
+        protected global::System.Web.UI.WebControls.RadioButtonList positionRDL;
         
         /// <summary>
         /// Label9 控件。
@@ -157,31 +175,13 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         protected global::System.Web.UI.WebControls.Label Label9;
         
         /// <summary>
-        /// days 控件。
+        /// SalaryBox 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox days;
-        
-        /// <summary>
-        /// Label10 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label10;
-        
-        /// <summary>
-        /// ErrorTip 控件。
-        /// </summary>
-        /// <remarks>
-        /// 自动生成的字段。
-        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ErrorTip;
+        protected global::System.Web.UI.WebControls.TextBox SalaryBox;
         
         /// <summary>
         /// Button1 控件。
@@ -191,5 +191,14 @@ namespace IceCreamCakeShop.Main._3._1._0_Login {
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
+        
+        /// <summary>
+        /// Button2 控件。
+        /// </summary>
+        /// <remarks>
+        /// 自动生成的字段。
+        /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button2;
     }
 }

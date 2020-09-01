@@ -17,5 +17,12 @@ namespace IceCreamCakeShop.Main._3._1._1_InfoManagement
         {
             Response.Redirect("StaffInfoManagement.aspx");
         }
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("edit"))
+            {
+                Response.Redirect($"editStaffInfo.aspx?StaffID={e.CommandArgument}");
+            }
+        }
     }
 }

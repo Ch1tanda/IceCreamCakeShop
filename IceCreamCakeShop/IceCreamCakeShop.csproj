@@ -140,6 +140,7 @@
     <Content Include="Main\3.1.1 InfoManagement\AddStaffInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\AddSupplierInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx" />
+    <Content Include="Main\3.1.1 InfoManagement\editStaffInfo.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\InfoManagement.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\StaffInfoManagement.aspx" />
     <Content Include="Main\3.1.1 InfoManagement\SupplierInfoManagement.aspx" />
@@ -276,6 +277,13 @@
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\DismissOrChangeStaffInfo.aspx.designer.cs">
       <DependentUpon>DismissOrChangeStaffInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.1 InfoManagement\editStaffInfo.aspx.cs">
+      <DependentUpon>editStaffInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.1 InfoManagement\editStaffInfo.aspx.designer.cs">
+      <DependentUpon>editStaffInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.1 InfoManagement\InfoManagement.aspx.cs">
       <DependentUpon>InfoManagement.aspx</DependentUpon>

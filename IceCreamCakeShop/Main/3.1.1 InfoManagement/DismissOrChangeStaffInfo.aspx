@@ -6,7 +6,7 @@
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="Label1" runat="server" Text="修改/删除员工信息"></asp:Label>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="LinqDataSource1" style="margin-right: 40px" Width="636px">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="LinqDataSource1" style="margin-right: 40px" Width="872px" Height="587px" OnRowCommand="GridView1_RowCommand">
             <Columns>
                 <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
                 <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
@@ -16,10 +16,15 @@
                 <asp:BoundField DataField="phonenumber" HeaderText="phonenumber" SortExpression="phonenumber" />
                 <asp:BoundField DataField="position" HeaderText="position" SortExpression="position" />
                 <asp:BoundField DataField="salary" HeaderText="salary" SortExpression="salary" />
-                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
+                <asp:TemplateField>
+                    <ItemTemplate>
+                        <asp:Button ID="EditButton" runat="server" CommandArgument='<%# Eval("id") %>' CommandName="edit" Text="编辑" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <asp:CommandField ShowDeleteButton="True" />
             </Columns>
         </asp:GridView>
-        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableDelete="True" EnableUpdate="True" EntityTypeName="" TableName="Staffinfo">
+        <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableDelete="True" EnableUpdate="True" EntityTypeName="" TableName="Staffinfo" EnableInsert="True">
         </asp:LinqDataSource>
     </p>
     <p>

@@ -24,5 +24,8 @@
 		<siteMapNode url="Main/3.1.7 RoutineManagement/RoutineManagement.aspx" title="事务提醒管理"  description="">
 			<siteMapNode url="Main/3.1.7 RoutineManagement/DessertReminder.aspx" title="点心库存提醒"  description="" />
 		</siteMapNode>
+	<siteMapNode>
+
+	</siteMapNode>
 	</siteMapNode>
 </siteMap>
