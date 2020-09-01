@@ -11,18 +11,33 @@ namespace IceCreamCakeShop.Main._3._1._7_RoutineManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataClasses1DataContext dc = new DataClasses1DataContext();
-            List<Stock> stocks = dc.Stock.Where(p => p.mid.Contains(('D').ToString()) && p.stock < 5).ToList();
-            string ss = "";
-            int cnt = 1;
-            foreach(var item in stocks)
-            {
-                ss += cnt.ToString() + ". " + item.mid + " " + item.name + " 库存不足" + "<br><br>";
-                cnt++;
-            }
-            Label1.Text = ss;
+
         }
 
-
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName.Equals("add"))
+            {
+                DataClasses1DataContext dc = new DataClasses1DataContext();
+                string recipe = dc.Cakeinfo.Where(p => p.id.Equals(e.CommandArgument)).FirstOrDefault().recipe;
+                /*List<int> rcp = new List<int>();
+                for(int i=4;i<=recipe.Length;i+=5)
+                {
+                    rcp.Add(Convert.ToInt32(recipe[i].ToString()));
+                }*/
+                Stock ds = dc.Stock.Where(p => p.mid.Equals(e.CommandArgument)).FirstOrDefault();
+                List<Stock> materials = dc.Stock.Where(p => p.mid.Contains("M")).ToList();
+                int i = 4;
+                foreach(var item in materials)
+                {
+                    //Label1.Text += (Convert.ToInt32(recipe[i].ToString()) * 5).ToString() + "<br>";
+                    item.stock -= Convert.ToInt32(recipe[i].ToString()) * 5;
+                    i += 5;
+                }
+                ds.stock += 5;
+                dc.SubmitChanges();
+                Response.Redirect(Request.Url.ToString());
+            }
+        }
     }
 }
