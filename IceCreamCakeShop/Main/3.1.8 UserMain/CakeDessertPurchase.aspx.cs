@@ -16,5 +16,42 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
                 Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
             }
         }
+        protected void UpdateVip(string id, decimal cmv)
+        {
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            Userinfo customer = dc.Userinfo.Where(p => p.id.Equals(id)).FirstOrDefault();
+            customer.gmv += cmv;
+            if(customer.gmv >= 100 && customer.gmv < 300)
+            {
+                customer.viptype = '1'.ToString();
+            }else if(customer.gmv >= 300 && customer.gmv < 800)
+            {
+                customer.viptype = '2'.ToString();
+            }
+            else if(customer.gmv >= 800)
+            {
+                customer.viptype = '3'.ToString();
+            }
+            dc.SubmitChanges();
+        }
+        protected float GetDiscount(string id)
+        {
+            float discount = 1F;
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            Userinfo customer = dc.Userinfo.Where(p => p.id.Equals(id)).FirstOrDefault();
+            switch (int.Parse(customer.viptype))
+            {
+                case 1:
+                    discount = 0.9F;
+                    break;
+                case 2:
+                    discount = 0.8F;
+                    break;
+                case 3:
+                    discount = 0.7F;
+                    break;
+            }
+            return discount;
+        }
     }
 }
