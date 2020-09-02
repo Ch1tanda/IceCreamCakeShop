@@ -29,5 +29,10 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
                 contain.Visible = true;
             }
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Response.Redirect("stockPurchase.aspx");
+        }
     }
 }

@@ -21,15 +21,17 @@
             </tr>
             <tr>
                 <td style="float: left; clip: rect(0px, auto, auto, auto); width: 334px;">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1">
+                    &nbsp;</td>
+                <td style="float: left; clip: rect(auto, 100px, auto, 100px);">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-right: 0px" Width="317px">
                         <Columns>
                             <asp:BoundField DataField="mid" HeaderText="原料id" ReadOnly="True" SortExpression="mid" />
                             <asp:BoundField DataField="name" HeaderText="名称" SortExpression="name" />
                             <asp:BoundField DataField="stock" HeaderText="库存" SortExpression="stock" />
+                            <asp:ButtonField ButtonType="Button" CommandName="Update" Text="进货" />
+                            <asp:ButtonField ButtonType="Button" CommandName="Update" Text="退货" />
                         </Columns>
                     </asp:GridView>
-                </td>
-                <td style="float: left; clip: rect(auto, 100px, auto, 100px);">
                     <asp:GridView ID="GridView2" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource2">
                         <Columns>
                             <asp:BoundField DataField="mid" HeaderText="点心id" ReadOnly="True" SortExpression="mid" />
