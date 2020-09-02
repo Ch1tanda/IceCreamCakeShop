@@ -6,6 +6,10 @@
 
         <asp:Label ID="Label2" runat="server" Font-Size="Larger" Text="库存管理"></asp:Label>
         <br />
+        <br />
+        <asp:Label ID="Tip" runat="server" Text="提醒：" Visible="False"></asp:Label>
+        <asp:Label ID="contain" runat="server" Text="Label" Visible="False"></asp:Label>
+        <br />
         <table style="width: 100%">
             <tr>
                 <td style="width: 334px; float: left; clip: rect(0px, auto, auto, auto);">
@@ -40,6 +44,8 @@
         </table>
         <br />
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT mid, name, stock FROM Stock WHERE (mid LIKE '%m%')"></asp:SqlDataSource>
+
+        <br />
 
     </div>
 </asp:Content>

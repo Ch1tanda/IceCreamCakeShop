@@ -11,7 +11,23 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Tip.Visible = false;
+            contain.Visible = false;
+            DataClasses1DataContext dc = new DataClasses1DataContext();
+            List<Stock> st = dc.Stock.Where(p=>p.stock < 100).ToList();
+            string text = "";
+            foreach(var item in st)
+            {
+                    text += item.name + ',';
+            }
+            if(text.Count() > 0)
+            {
+                text.Remove(text.Count() - 1);
+                text += "库存不足，请及时补充";
+                contain.Text = text;
+                Tip.Visible = true;
+                contain.Visible = true;
+            }
         }
     }
 }
