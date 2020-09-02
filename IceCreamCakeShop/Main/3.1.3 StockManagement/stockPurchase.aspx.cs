@@ -7,16 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace IceCreamCakeShop.Main._3._1._3_StockManagement
 {
-    public partial class StockManagement : System.Web.UI.Page
+    public partial class stockpurchase : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Response.Redirect("stockPurchase.aspx");
         }
     }
 }

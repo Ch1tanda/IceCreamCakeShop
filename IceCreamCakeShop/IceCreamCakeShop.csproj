@@ -147,6 +147,8 @@
     <Content Include="Main\3.1.1 InfoManagement\UserInfoManagement.aspx" />
     <Content Include="Main\3.1.2 VipManagement\VipManagement.aspx" />
     <Content Include="Main\3.1.3 StockManagement\StockManagement.aspx" />
+    <Content Include="Main\3.1.3 StockManagement\stockPurchase.aspx" />
+    <Content Include="Main\3.1.3 StockManagement\stockReturn.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\CakeMakeManagement.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\addCake.aspx" />
     <Content Include="Main\3.1.4 CakeMakeManagement\CakeReserve.aspx" />
@@ -328,6 +330,20 @@
     </Compile>
     <Compile Include="Main\3.1.3 StockManagement\StockManagement.aspx.designer.cs">
       <DependentUpon>StockManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.3 StockManagement\stockPurchase.aspx.cs">
+      <DependentUpon>stockPurchase.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.3 StockManagement\stockPurchase.aspx.designer.cs">
+      <DependentUpon>stockPurchase.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.3 StockManagement\stockReturn.aspx.cs">
+      <DependentUpon>stockReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.3 StockManagement\stockReturn.aspx.designer.cs">
+      <DependentUpon>stockReturn.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.4 CakeMakeManagement\CakeMakeManagement.aspx.cs">
       <DependentUpon>CakeMakeManagement.aspx</DependentUpon>
