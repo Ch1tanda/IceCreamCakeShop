@@ -56,5 +56,10 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                 }
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Register.aspx");
+        }
     }
 }

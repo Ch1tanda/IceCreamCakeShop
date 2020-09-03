@@ -43,6 +43,23 @@
             border-style:solid;
             border-color:yellow;
         }
+                .MessageBorder{
+            width:1890px;
+            height:40px;
+        }
+        .MessageBorderLeft{
+            text-align:right;
+            width:700px;
+            height:40px;
+            float:left;
+            line-height:40px;
+        }
+        .MessageBorderRight{
+            width:1190px;
+            height:40px;
+            float:right;
+            line-height:40px;
+        }
         </style>
 </head>
 <body>
