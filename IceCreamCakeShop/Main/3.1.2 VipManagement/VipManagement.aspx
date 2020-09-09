@@ -1,24 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="VipManagement.aspx.cs" Inherits="IceCreamCakeShop.Main.VipManagement.VipManagement" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataSourceID="LinqDataSource1">
-        <Columns>
-            <asp:CommandField ShowSelectButton="True" />
-            <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
-            <asp:BoundField DataField="username" HeaderText="username" ReadOnly="True" SortExpression="username" />
-            <asp:BoundField DataField="viptype" HeaderText="viptype" ReadOnly="True" SortExpression="viptype" />
-        </Columns>
-        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-        <SortedAscendingCellStyle BackColor="#FFF1D4" />
-        <SortedAscendingHeaderStyle BackColor="#B95C30" />
-        <SortedDescendingCellStyle BackColor="#F1E5CE" />
-        <SortedDescendingHeaderStyle BackColor="#93451F" />
-    </asp:GridView>
-    <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableUpdate="True" EntityTypeName="" Select="new (id, username, viptype)" TableName="Userinfo">
-    </asp:LinqDataSource>
-</asp:Content>
+    </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+    <p>
+    </p>
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="LinqDataSource1">
+        <Columns>
+            <asp:BoundField DataField="id" HeaderText="id" ReadOnly="True" SortExpression="id" />
+            <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" Visible="False" />
+            <asp:BoundField DataField="username" HeaderText="username" ReadOnly="True" SortExpression="username" />
+            <asp:BoundField DataField="phonenumber" HeaderText="phonenumber" SortExpression="phonenumber" Visible="False" />
+            <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" Visible="False" />
+            <asp:BoundField DataField="birthday" HeaderText="birthday" SortExpression="birthday" Visible="False" />
+            <asp:TemplateField HeaderText="viptype" SortExpression="viptype">
+                <EditItemTemplate>
+                    <asp:DropDownList ID="DropDownList1" runat="server" SelectedValue='<%# Bind("viptype") %>'>
+                        <asp:ListItem>0</asp:ListItem>
+                        <asp:ListItem>1</asp:ListItem>
+                        <asp:ListItem>2</asp:ListItem>
+                        <asp:ListItem>3</asp:ListItem>
+                    </asp:DropDownList>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1" runat="server" Text='<%# Bind("viptype") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:BoundField DataField="gmv" HeaderText="gmv" SortExpression="gmv" Visible="False" />
+            <asp:CommandField ShowEditButton="True" />
+        </Columns>
+    </asp:GridView>
+    <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableUpdate="True" EntityTypeName="" TableName="Userinfo">
+    </asp:LinqDataSource>
 </asp:Content>
