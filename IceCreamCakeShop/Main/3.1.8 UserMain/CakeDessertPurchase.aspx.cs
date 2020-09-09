@@ -37,8 +37,11 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
             {
                 DataClasses1DataContext dc = new DataClasses1DataContext();
                 Stock dessert = dc.Stock.Where(p => p.mid.Equals(e.CommandArgument)).FirstOrDefault();
-                if (dessert.stock <= 0) 
-                    Response.Write("<script>alert('抱歉，该商品暂时售罄。')</script>");
+                if (dessert != null)
+                {
+                    if (dessert.stock <= 0)
+                        Response.Write("<script>alert('抱歉，该商品暂时售罄。')</script>");
+                }
                 else
                     Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");
             }
