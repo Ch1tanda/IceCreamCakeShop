@@ -163,7 +163,8 @@
     <Content Include="Main\3.1.8 UserMain\ProfileModify.aspx" />
     <Content Include="Main\3.1.8 UserMain\PasswordModify.aspx" />
     <Content Include="Main\index.aspx" />
-    <Content Include="public\picture\index.jpeg" />
+    <Content Include="public\picture\topLogo.png" />
+    <Content Include="public\picture\topLogo150.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />

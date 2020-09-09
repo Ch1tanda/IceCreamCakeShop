@@ -16,7 +16,9 @@
         .TopMain{
             width:1890px;
             height:150px;
-            background-color:deepskyblue;
+            background-image:url("/public/picture/topLogo150.png");
+            background-repeat:no-repeat;
+            background-size:cover;
             border-style:solid;
             border-color:yellow;
         }
@@ -46,14 +48,14 @@
             border-color:yellow;
         }
         .button{
-            float:right;
+            float:left;
             width:100px;
             height:22px;
             background:none;
             border:thin;
         }
         .TopProfile{
-            float:right;
+            float:left;
             width:400px;
             height:22px;
         }
@@ -85,18 +87,12 @@
     <form id="form1" runat="server">
           <div id="MainPage" class="MainPage">
             <div id="TopMain" class="TopMain">
-                <div id="TopMessage" class="TopMessage">
-                    <p>额外工具栏</p>
-                </div>
-                <div id="TopProfile" class="TopProfile">
+                                <div id="TopProfile" class="TopProfile">
                     <asp:Button ID="Button1" runat="server" Text="历史订单查询" class="button" OnClick="Button1_Click"/>
                     <asp:Button ID="Button2" runat="server" Text="密码修改" class="button" OnClick="Button2_Click"/>
                     <asp:Button ID="Button3" runat="server" Text="个人信息" class="button" OnClick="Button3_Click"/>
                     <asp:Button ID="Button4" runat="server" Text="购买蛋糕点心" class="button" OnClick="Button4_Click"/>
                     </div>
-                <div id="Logo" class="Logo">
-                    <p">这里以后是LOGO的图片&nbsp;</p>
-                </div>
             </div>
             <div id="PlaceHolder" class="PlaceHolder">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

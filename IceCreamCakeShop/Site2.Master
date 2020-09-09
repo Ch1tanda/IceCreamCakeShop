@@ -26,11 +26,11 @@
             background-color:deepskyblue;
         }
         .Logo{
-            width:100%;
-            height:128px;
+            width:1980px;
+            height:150px;
         }
         .LeftTreeView{
-            width:214.5px;height:810px;
+            width:214.5px;height:830px;
             background-color:lightpink;
             float:left;
             border-style:solid;
@@ -66,11 +66,9 @@
     <form runat="server">
         <div id="MainPage" class="MainPage">
             <div id="TopMain" class="TopMain">
-                <div id="TopMessage" class="TopMessage">
-                    <p>额外工具栏</p>
-                </div>
+
                 <div id="Logo" class="Logo">
-                    <p">这里以后是LOGO的图片</p>
+                    <img alt="" class="Logo" src="/public/picture/topLogo.png" />
                 </div>
             </div>
             <div id="PlaceHolder" class="PlaceHolder">
