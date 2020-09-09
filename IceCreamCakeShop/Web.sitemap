@@ -7,12 +7,8 @@
             <siteMapNode url="Main/3.1.1 InfoManagement/SupplierInfoManagement.aspx" title="供应商信息管理"  description="" />
         </siteMapNode>
 		<siteMapNode url="Main/3.1.2 VipManagement/VipManagement.aspx" title="会员信息管理"  description="">
-			<siteMapNode url="" title=""  description="">
-			</siteMapNode>
 		</siteMapNode>
 		<siteMapNode url="Main/3.1.3 StockManagement/StockManagement.aspx" title="原料点心进退货管理"  description="">
-			<siteMapNode url="" title=""  description="">
-			</siteMapNode>
 		</siteMapNode>
 		<siteMapNode url="Main/3.1.4 CakeMakeManagement/CakeMakeManagement.aspx" title="蛋糕/点心管理"  description="">
 			<siteMapNode url="Main/3.1.4 CakeMakeManagement/CakeReserve.aspx" title="预订管理"  description="" />
