@@ -24,7 +24,7 @@
         </div>
         <div class="MessageBorderRight">
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="登录" Width="73px"/>
-            <asp:Button ID="Button2" runat="server" Text="注册" Width="73px" OnClick="Button2_Click" />
+            <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="注册" Width="73px"  />
         </div>
     </div>
 </asp:Content>

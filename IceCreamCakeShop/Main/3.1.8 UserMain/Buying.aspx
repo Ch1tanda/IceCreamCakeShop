@@ -50,7 +50,8 @@
                 </td>
                 <td>
                     <asp:TextBox ID="TextBox2" runat="server" AutoPostBack="True" Width="159px" PlaceHolder="1" OnTextChanged="TextBox2_TextChanged"></asp:TextBox>
-                    <asp:Label ID="Label6" runat="server"></asp:Label>
+                    <asp:Label ID="discountTip" runat="server" Text="Label"></asp:Label>
+&nbsp;<asp:Label ID="Label6" runat="server"></asp:Label>
                     <asp:Label ID="Label9" runat="server"></asp:Label>
                 </td>
                 <td>&nbsp;</td>

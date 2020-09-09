@@ -34,6 +34,9 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
             Cakeinfo cake = dc.Cakeinfo.Where(p => p.id.Equals(pid)).FirstOrDefault();
             Label8.Text = cake.price.ToString();
             Label5.Text = cake.name.ToString();
+            decimal dis = GetDiscount(Session["id"].ToString());
+            string dicountString = (dis * 10).ToString();
+            discountTip.Text = "已享受"+ dicountString + "折优惠";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
