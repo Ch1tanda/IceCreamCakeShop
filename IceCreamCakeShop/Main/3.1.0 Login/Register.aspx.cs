@@ -15,27 +15,59 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
+
+            if (year.Text == "" || month.Text == "" || days.Text == ""
+              || password.Text == "" || repassword.Text == ""
+              || phonenumber.Text == "" || address.Text == "")
+            {
+                IsNULLTip.Text = "注册信息填写不完整";
+                IsNULLTip.Visible = true;
+                return;
+            }
+            IsNULLTip.Visible = false;
             DataClasses1DataContext dc = new DataClasses1DataContext();
             Userinfo NewUserInfo = new Userinfo();
             string TempYear = year.Text.ToString();
             string TempMonth = month.Text.ToString();
             string TempDays = days.Text.ToString();
+            string PhoneNumString = phonenumber.Text.ToString();
+            for (int i = 0; i < PhoneNumString.Count(); i++)
+            {
+                if (PhoneNumString[i] < '0' || PhoneNumString[i] > '9')
+                {
+                    PHETip.Text = "电话格式错误";
+                    PHETip.Visible = true;
+                    return;
+                }
+            }
+            Userinfo ExistUserInfo = dc.Userinfo.Where(p => p.phonenumber.Equals(phonenumber.Text.Trim())).FirstOrDefault();
+            if (ExistUserInfo != null)
+            {
+                PHETip.Visible = true;
+                PHETip.Text = "该电话号码已经被注册";
+                return;
+            }
+            PHETip.Visible = false;
             char zero = '0';
             string maxDyas = zero.ToString();
-            if(int.Parse(TempYear) > 1900 && int.Parse(TempYear) < 2500
+            if (!CheckDays(TempYear, TempMonth, TempDays))
+            {
+                ErrorTip.Visible = true;
+                return;
+            }
+            if (int.Parse(TempYear) > 1900 && int.Parse(TempYear) < 2500
                && int.Parse(TempMonth) > 0 && int.Parse(TempMonth) < 13)
             {
                 maxDyas = GetDays(TempYear, TempMonth);
 
             }
-            if(int.Parse(TempDays) > int.Parse(maxDyas) || int.Parse(TempDays) < 1)
+            if (int.Parse(TempDays) > int.Parse(maxDyas) || int.Parse(TempDays) < 1)
             {
                 ErrorTip.Visible = true;
             }
             else
             {
-                ErrorTip.Visible = false;
-                
+                PHETip.Visible = false;
                 if (TempMonth.Count() == 1)
                 {
                     TempMonth = zero + TempMonth;
@@ -62,9 +94,34 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                 dc.SubmitChanges();
                 Response.Redirect("Login.aspx");
             }
-            
+
         }
 
+        protected bool CheckDays(string TempYear, string TempMonth, string TempDays)
+        {
+            for (int i = 0; i < TempYear.Count(); i++)
+            {
+                if (TempYear[i] < '0' || TempYear[i] > '9')
+                {
+                    return false;
+                }
+            }
+            for (int i = 0; i < TempMonth.Count(); i++)
+            {
+                if (TempMonth[i] < '0' || TempMonth[i] > '9')
+                {
+                    return false;
+                }
+            }
+            for (int i = 0; i < TempDays.Count(); i++)
+            {
+                if (TempDays[i] < '0' || TempDays[i] > '9')
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
         protected string GetDays(string year, string month)
         {
             int days = 31;
@@ -78,7 +135,7 @@ namespace IceCreamCakeShop.Main._3._1._0_Login
                     break;
                 case 2:
                     {
-                        if (int.Parse(year) % 4 == 0 && int.Parse(year) % 100 != 0 
+                        if (int.Parse(year) % 4 == 0 && int.Parse(year) % 100 != 0
                             || int.Parse(year) % 400 == 0)
                         {
                             days = 29;
