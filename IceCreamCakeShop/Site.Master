@@ -71,7 +71,8 @@
     <form runat="server">
         <div id="MainPage" class="MainPage">
             <div id="TopMain" class="TopMain">
-                <asp:Button ID="Button1" runat="server" Text="Button" style="background:none;color:darkred" OnClick="Button1_Click"/>
+                <asp:Button ID="Button1" runat="server" Text="Button" style="float:left;background:none;color:darkred" OnClick="Button1_Click"/>
+                <asp:Button ID="Button2" runat="server" Text="注销" style="float:right;background:none" OnClick="Button2_Click"/>
             </div>
             <div id="LeftTreeView" class="LeftTreeView">
                 <div id="TreeView" class="TreeView">

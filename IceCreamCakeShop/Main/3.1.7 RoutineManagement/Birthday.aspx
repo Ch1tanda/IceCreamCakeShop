@@ -7,8 +7,9 @@
             <asp:BoundField DataField="phonenumber" HeaderText="phonenumber" ReadOnly="True" SortExpression="phonenumber" />
         </Columns>
     </asp:GridView>
-    <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EntityTypeName="" Select="new (id, username, phonenumber)" TableName="Userinfo">
-    </asp:LinqDataSource>
+<asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EntityTypeName="" Select="new (id, username, phonenumber)" TableName="Userinfo">
+</asp:LinqDataSource>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    </asp:Content>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+</asp:Content>

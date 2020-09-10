@@ -46,5 +46,10 @@ namespace IceCreamCakeShop
         {
             Response.Redirect("~/Main/3.1.7 RoutineManagement/Birthday.aspx");
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
+        }
     }
 }
