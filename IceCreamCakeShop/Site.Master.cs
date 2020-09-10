@@ -14,7 +14,6 @@ namespace IceCreamCakeShop
         {
             DataClasses1DataContext dc = new DataClasses1DataContext();
             var da = DateTime.Today;
-            String year = da.Year.ToString();
             String month;
             if (da.Month < 10)
             {
@@ -29,14 +28,13 @@ namespace IceCreamCakeShop
             }
             else day = da.Day.ToString();
 
-            String combine = year + month + day;
+            String combine = month + day;
 
             var user = dc.Userinfo;
-            var relist = user.Where(p => p.birthday == combine).FirstOrDefault();
-            if(relist.birthday.ToString() == combine)
+            var relist = user.Where(p => p.birthday.ToString().Substring(4) == combine).FirstOrDefault();
+            if(relist!=null&&relist.birthday.ToString().Substring(4) == combine)
             {
                 Button1.Text = "今天有人有生日，请尽快联系是否订蛋糕";
-                Session["birthday"] = combine;
             }
             else
             {
@@ -46,7 +44,7 @@ namespace IceCreamCakeShop
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/Main/3.1.7 RoutineManagement/Birthday.aspx");
         }
     }
 }

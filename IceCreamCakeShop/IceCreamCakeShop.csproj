@@ -156,6 +156,7 @@
     <Content Include="Main\3.1.6 DessertManagement\DessertManagement.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\DessertReminder.aspx" />
     <Content Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx" />
+    <Content Include="Main\3.1.7 RoutineManagement\Birthday.aspx" />
     <Content Include="Main\3.1.8 UserMain\Buying.aspx" />
     <Content Include="Main\3.1.8 UserMain\CakeDessertPurchase.aspx" />
     <Content Include="Main\3.1.8 UserMain\OrderSearch.aspx" />
@@ -394,6 +395,13 @@
     </Compile>
     <Compile Include="Main\3.1.7 RoutineManagement\RoutineManagement.aspx.designer.cs">
       <DependentUpon>RoutineManagement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main\3.1.7 RoutineManagement\Birthday.aspx.cs">
+      <DependentUpon>Birthday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main\3.1.7 RoutineManagement\Birthday.aspx.designer.cs">
+      <DependentUpon>Birthday.aspx</DependentUpon>
     </Compile>
     <Compile Include="Main\3.1.8 UserMain\Buying.aspx.cs">
       <DependentUpon>Buying.aspx</DependentUpon>
