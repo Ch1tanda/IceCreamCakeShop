@@ -39,5 +39,10 @@ namespace IceCreamCakeShop.Main._3._1._7_RoutineManagement
                 Response.Redirect(Request.Url.ToString());
             }
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("../3.1.3 StockManagement/StockManagement.aspx");
+        }
     }
 }
