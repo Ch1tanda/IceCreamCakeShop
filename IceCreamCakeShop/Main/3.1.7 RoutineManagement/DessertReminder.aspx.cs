@@ -11,7 +11,11 @@ namespace IceCreamCakeShop.Main._3._1._7_RoutineManagement
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if(!IsPostBack)
+            {
+                if (GridView1.Rows.Count == 0)
+                    Label1.Text = "点心库存充足。";
+            }
         }
 
         protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
