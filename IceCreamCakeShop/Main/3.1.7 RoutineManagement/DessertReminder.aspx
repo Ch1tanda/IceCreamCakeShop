@@ -20,5 +20,7 @@
         </asp:GridView>
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:IceCream_Cake_ShopConnectionString %>" SelectCommand="SELECT mid, name FROM Stock WHERE (mid LIKE '%d%') AND (stock &lt; 5)"></asp:SqlDataSource>
 
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="材料不足 补充材料" />
+
     </div>
 </asp:Content>

@@ -19,7 +19,9 @@
         .TopMain{
             width:1890px;
             height:150px;
-            background-color:deepskyblue;
+            background-image:url("/public/picture/topLogo150.png");
+            background-repeat:no-repeat;
+            background-size:cover;
             border-style:solid;
             border-color:yellow;
         }
@@ -69,10 +71,8 @@
     <form runat="server">
         <div id="MainPage" class="MainPage">
             <div id="TopMain" class="TopMain">
-
-                <div id="Logo" class="Logo">
-                    <img alt="" class="Logo" src="/public/picture/topLogo.png" />
-                </div>
+                <asp:Button ID="Button1" runat="server" Text="Button" style="float:left;background:none;color:darkred" OnClick="Button1_Click"/>
+                <asp:Button ID="Button2" runat="server" Text="注销" style="float:right;background:none" OnClick="Button2_Click"/>
             </div>
             <div id="LeftTreeView" class="LeftTreeView">
                 <div id="TreeView" class="TreeView">
