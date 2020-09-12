@@ -41,6 +41,8 @@ namespace IceCreamCakeShop.Main._3._1._8_UserMain
                 {
                     if (dessert.stock <= 0)
                         Response.Write("<script>alert('抱歉，该商品暂时售罄。')</script>");
+                    else
+                        Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");
                 }
                 else
                     Response.Redirect($"~/Main/3.1.8 UserMain/Buying.aspx?ProductID={e.CommandArgument}");

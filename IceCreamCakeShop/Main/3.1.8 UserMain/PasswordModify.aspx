@@ -12,18 +12,22 @@
     <div class="MessageBorderLeft">原密码:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:TextBox ID="TextBox1" runat="server" type="password"></asp:TextBox>
+            <asp:Label ID="Label5" runat="server" Text=""></asp:Label>
         </div>
     </div>
         <div class="MessageBorder">
     <div class="MessageBorderLeft">新密码:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:TextBox ID="TextBox2" runat="server" type="password"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+            <asp:Label ID="Label3" runat="server" Text=""></asp:Label>
         </div>
     </div>
         <div class="MessageBorder">
     <div class="MessageBorderLeft">重复新密码:&nbsp;</div>
         <div class="MessageBorderRight">
             <asp:TextBox ID="TextBox3" runat="server" type="password"></asp:TextBox>
+            <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
         </div>
     </div>
     <div>

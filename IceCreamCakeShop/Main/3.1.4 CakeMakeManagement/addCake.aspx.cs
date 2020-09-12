@@ -22,7 +22,7 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
             //int newone = cake.Count() + 1;
             char c = cake.Last().id.Last();
             int nc = int.Parse(c.ToString()) + 1;
-            string newone = cake.Last().id.Substring(0, cake.Last().id.Length-1);
+            string newone = cake.Last().id.Substring(0, cake.Last().id.Length - 1);
             newone += nc;
             Label5.Text = newone;
         }
@@ -33,16 +33,19 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
             var id = Label5.Text;
             DataClasses1DataContext dc = new DataClasses1DataContext();
             Cakeinfo newCake = new Cakeinfo();
-            Stock newStock = new Stock();
             newCake.id = id;
-            newStock.mid = id;
             newCake.name = TextBox1.Text.Trim();
-            newStock.name = newCake.name;
             newCake.recipe = TextBox2.Text.Trim();
             newCake.price = Convert.ToDecimal(TextBox3.Text);
-            newStock.stock = 0;
             dc.Cakeinfo.InsertOnSubmit(newCake);
-            dc.Stock.InsertOnSubmit(newStock);
+            if (id.Contains("D"))
+            {
+                Stock newStock = new Stock();
+                newStock.mid = id;
+                newStock.name = newCake.name;
+                newStock.stock = 0;
+                dc.Stock.InsertOnSubmit(newStock);
+            }
             dc.SubmitChanges();
             Response.Redirect("CakeMakeManagement.aspx");
         }
@@ -51,10 +54,10 @@ namespace IceCreamCakeShop.Main._3._1._4_CakeMakeManagement
         {
             String recipe = TextBox2.Text.Trim();
             int cnt = 0;
-            for (int i = 0; i < recipe.Length; i++) 
+            for (int i = 0; i < recipe.Length; i++)
             {
                 if (recipe[i] == 'M')
-                    if (recipe[i + 3] == ':') 
+                    if (recipe[i + 3] == ':')
                         cnt++;
             }
             if (cnt != 10)

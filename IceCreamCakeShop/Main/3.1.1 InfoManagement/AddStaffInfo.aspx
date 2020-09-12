@@ -60,6 +60,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="AgeBox" runat="server"></asp:TextBox>
+                    <asp:Label ID="ageLab" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -69,6 +70,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="PNBox" runat="server"></asp:TextBox>
+                    <asp:Label ID="PHETip" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>
@@ -91,6 +93,7 @@
                 </td>
                 <td>
                     <asp:TextBox ID="SalaryBox" runat="server"></asp:TextBox>
+                    <asp:Label ID="salaryLab" runat="server" ForeColor="Red" Text="Label" Visible="False"></asp:Label>
                 </td>
                 <td>&nbsp;</td>
             </tr>

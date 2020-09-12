@@ -12,6 +12,11 @@ namespace IceCreamCakeShop
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session.Count == 0)
+            {
+                Response.Redirect("~/Main/3.1.0 Login/Login.aspx");
+            }
+
             DataClasses1DataContext dc = new DataClasses1DataContext();
             var da = DateTime.Today;
             String month;
