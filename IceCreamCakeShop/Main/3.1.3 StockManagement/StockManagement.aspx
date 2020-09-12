@@ -21,12 +21,21 @@
             </tr>
             <tr>
                 <td style="float: left; clip: rect(0px, auto, auto, auto); width: 421px; height: 357px;">
-                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="LinqDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-right: 0px" Width="417px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
+                    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="LinqDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-right: 0px" Width="417px" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" OnRowCommand="GridView1_RowCommand">
                         <Columns>
-                            <asp:CommandField EditText="进/退货" ShowEditButton="True" UpdateText="保存" />
                             <asp:BoundField DataField="mid" HeaderText="编号" ReadOnly="True" SortExpression="mid" />
                             <asp:BoundField DataField="name" HeaderText="原料" SortExpression="name" />
                             <asp:BoundField DataField="stock" HeaderText="库存" SortExpression="stock" />
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button ID="Button3" runat="server" CommandArgument='<%# Eval("mid") %>' CommandName="editbtn" Text="进货" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
+                            <asp:TemplateField>
+                                <ItemTemplate>
+                                    <asp:Button ID="Button4" runat="server" CommandArgument='<%# Eval("mid") %>' CommandName="tuihuo" OnClick="Button4_Click" Text="退货" />
+                                </ItemTemplate>
+                            </asp:TemplateField>
                         </Columns>
                         <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
                         <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
@@ -39,6 +48,12 @@
                         <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
                     </td>
+            </tr>
+        </table>
+        <table style="width: 100%">
+            <tr>
+                <td style="float: left; clip: rect(0px, auto, auto, auto); width: 421px; height: 357px;">
+                    &nbsp;</td>
                 <td style="float: left; clip: rect(auto, 100px, auto, 100px); height: 357px;">
                     <asp:LinqDataSource ID="LinqDataSource1" runat="server" ContextTypeName="IceCreamCakeShop.DataClasses1DataContext" EnableDelete="True" EnableInsert="True" EnableUpdate="True" EntityTypeName="" TableName="Stock">
                     </asp:LinqDataSource>

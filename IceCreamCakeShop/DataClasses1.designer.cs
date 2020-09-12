@@ -886,7 +886,12 @@ namespace IceCreamCakeShop
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
 		}
-	}
+
+        internal bool Equals(object p)
+        {
+            throw new NotImplementedException();
+        }
+    }
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Supplierinfo")]
 	public partial class Supplierinfo : INotifyPropertyChanging, INotifyPropertyChanged

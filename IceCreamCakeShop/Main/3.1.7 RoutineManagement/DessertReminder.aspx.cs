@@ -48,5 +48,10 @@ namespace IceCreamCakeShop.Main._3._1._7_RoutineManagement
         {
             Response.Redirect("../3.1.3 StockManagement/StockManagement.aspx");
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

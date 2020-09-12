@@ -7,7 +7,7 @@
         <asp:Label ID="Label1" runat="server"></asp:Label>
 
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataKeyNames="mid" DataSourceID="SqlDataSource1" OnRowCommand="GridView1_RowCommand" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
             <Columns>
                 <asp:BoundField DataField="mid" HeaderText="点心id" ReadOnly="True" SortExpression="mid" />
                 <asp:BoundField DataField="name" HeaderText="点心名称" SortExpression="name" />

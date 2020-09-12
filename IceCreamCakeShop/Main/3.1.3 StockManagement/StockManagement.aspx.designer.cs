@@ -7,13 +7,11 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace IceCreamCakeShop.Main._3._1._3_StockManagement
-{
-
-
-    public partial class StockManagement
-    {
-
+namespace IceCreamCakeShop.Main._3._1._3_StockManagement {
+    
+    
+    public partial class StockManagement {
+        
         /// <summary>
         /// Label2 控件。
         /// </summary>
@@ -22,7 +20,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label2;
-
+        
         /// <summary>
         /// Tip 控件。
         /// </summary>
@@ -31,7 +29,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Tip;
-
+        
         /// <summary>
         /// contain 控件。
         /// </summary>
@@ -40,7 +38,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label contain;
-
+        
         /// <summary>
         /// Label3 控件。
         /// </summary>
@@ -49,7 +47,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label3;
-
+        
         /// <summary>
         /// Label4 控件。
         /// </summary>
@@ -58,7 +56,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label4;
-
+        
         /// <summary>
         /// GridView1 控件。
         /// </summary>
@@ -67,7 +65,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-
+        
         /// <summary>
         /// LinqDataSource1 控件。
         /// </summary>
@@ -76,7 +74,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinqDataSource LinqDataSource1;
-
+        
         /// <summary>
         /// GridView2 控件。
         /// </summary>
@@ -85,7 +83,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView2;
-
+        
         /// <summary>
         /// SqlDataSource2 控件。
         /// </summary>
@@ -94,7 +92,7 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
-
+        
         /// <summary>
         /// SqlDataSource1 控件。
         /// </summary>

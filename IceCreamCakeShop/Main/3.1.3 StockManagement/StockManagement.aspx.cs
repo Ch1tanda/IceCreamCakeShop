@@ -34,5 +34,22 @@ namespace IceCreamCakeShop.Main._3._1._3_StockManagement
         {
 
         }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName .Equals ("editbtn"))
+            {
+                Response.Redirect($"stockPurchase.aspx?mid={e.CommandArgument }");
+            }
+            if(e.CommandName .Equals ("tuihuo"))
+            {
+                Response.Redirect($"stockReturn.aspx?mid={e.CommandArgument }");
+            }
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
